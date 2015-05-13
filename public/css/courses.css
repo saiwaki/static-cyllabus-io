@@ -308,16 +308,12 @@
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0.8;
 }
 .next-course:before{
   border-color: #3C9A43;
 }
 .next-course:active:before, .next-course:focus:before, .next-course:hover:before{
   border-width: 2px;
-}
-.show .similar-course .next-course:hover{
-  opacity: 1;
 }
 .show .similar-course .pre-course{
   width: 700px;
