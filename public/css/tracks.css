@@ -1,0 +1,90 @@
+.track-lists{
+  margin: 30px 0px;
+}
+.track-list{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 10px 10px;
+  padding: 2px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid #555;
+  color: #555;
+}
+.track-list:hover{
+  color: #555;
+}
+.track-list.backbone{
+  border: 2px solid #075c94;
+  color: #075c94;
+}
+.track-list.css{
+  border: 2px solid #0171bb;
+  color: #0171bb;
+}
+.track-list.ruby{
+  border: 2px solid #c21512;
+  color: #c21512;
+}
+.track-list.jquery{
+  border: 2px solid #0AA1CB;
+  color: #0AA1CB;
+}
+.track-list.design{
+  border: 2px solid #95c530;
+  color: #95c530;
+}
+.track-list.wordpress{
+  border: 2px solid #0074a2;
+  color: #0074a2;
+}
+.track-list:first-child{
+  margin-left: 0px;
+}
+
+.tracks{
+  margin-top: 40px;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+}
+.tracks-image{
+  width: 100%;
+  height: 65px;
+}
+.tracks-image img{
+  display: block;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+.tracks-name{
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-bottom: 1px solid #ddd;
+}
+.track-content{
+  max-height: 400px;
+  overflow: scroll;
+}
+.track-content .track a{
+  display: block;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+.track-content .track a:hover{
+  background-color: #f8f8f8;
+}
+.track-content .track:last-child a{
+  border: none;
+}
+.backbone{
+  border: 1px solid #ccc;
+}
+.backbone .tracks-image{
+  background-color: #075c94;
+}
+.backbone .tracks-name{
+  color: #075c94;
+}

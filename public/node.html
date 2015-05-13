@@ -1,0 +1,72 @@
+<div class="node heading">
+  <div class="check"></div>
+  Step11: rails console でモデルを確認
+</div>
+<div class="node program">
+  <pre><code>￼$ rails console<br>> Board<br>> Comment</code></pre>
+</div>
+<div class="node image">
+  <img src="img/rails/11.png">
+</div>
+<div class="node heading">
+  <div class="check"></div>
+  Step12: boardのseedデータを確認する
+</div>
+<div class="node program">
+  <pre><code>￼$ rails console <= 以下は、起動したままで続ける<br>> Board.all</code></pre>
+</div>
+<div class="text">
+  seedデータが10件入っているのが確認できると思います。
+</div>
+<div class="node image">
+  <img src="img/rails/12.png">
+</div>
+<div class="node heading">
+  <div class="check"></div>
+  Step13: commentテーブルは空であること確認
+</div>
+<div class="node program">
+  <pre><code>> Comment.all</code></pre>
+</div>
+<div class="node text">
+  commentテーブルの中身は空です。
+</div>
+<div class="node image">
+  <img src="img/rails/13.png">
+</div>
+<div class="node heading">
+  <div class="check"></div>
+  Step14: boardを1件作成する
+</div>
+<div class="node diff">
+  <div role="tabpanel">
+    <!-- Nav tabs -->
+    <div class="nav-tabs-content file-header">
+      <div class="file-name table">
+        <div class="table-cell">
+          db/seeds.rb
+        </div>
+      </div>
+      <div class="switch-btn table">
+        <ul class="nav nav-tabs table-cell" role="tablist">
+          <li role="diff" class="active">
+            <a href="#diff1" aria-controls="diff1" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+          </li>
+          <li role="diff">
+            <a href="#all1" aria-controls="all1" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="diff1">
+        &nbsp;&nbsp;
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="all1">
+      </div>
+    </div>
+  </div>
+</div>

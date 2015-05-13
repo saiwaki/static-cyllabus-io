@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cyllabus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/hover-min.css">
+  <link rel="stylesheet" type="text/css" href="css/github-diff.css">
+  <link rel="stylesheet" href="highlight/styles/github.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/courses.css">
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="highlight/highlight.pack.js"></script>
+</head>
+<body class="courses show">
+  <div id="wrapper">
+    <header id="header">
+      <nav>
+        <div class="main-content">
+          <div class="header-left left">
+            <div class="table">
+              <div class="table-cell">
+                <a href="" class="logo">
+                  <img src="img/logo.png">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header-right right">
+            <ul>
+              <li>
+                <a href="courses-index.html">Courses</a>
+              </li>
+              <li>
+                <a href="tracks.html">Tracks</a>
+              </li>
+              <li>
+                <a href="">Login</a>
+              </li>
+              <li class="signup">
+                <div class="table-cell">
+                  <a href="" class="signup-btn">
+                    Sign up
+                  </a>
+                </div>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </nav>
+    </header>
+    <div id="main">
+      <div class="main-content">
+        <div class="courses-head">
+          <div class="date-by-views table">
+            <div class="date-by table-cell">
+              Posted May 11, 2015 by
+              <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+            </div>
+            <div class="views table-cell">
+              <span class="num">25780</span>views
+            </div>
+          </div>
+          <div class="courses-title">
+            <h1>Backbone on Rails で作る掲示板サービス #1</h1>
+          </div>
+          <div class="courses-tag">
+            <a href="" class="tag track backbone">backbone-on-rails</a>
+            <a href="" class="tag">Ruby on Rails</a>
+          </div>
+        </div>
+      </div>
+      <div class="courses-content">
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <div class="nav-tabs-content">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="courses" class="active"><a href="#step-by-step" aria-controls="step-by-step" role="tab" data-toggle="tab">Step-by-step</a></li>
+              <li role="courses"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
+              <li role="courses"><a href="#links" aria-controls="urls" role="tab" data-toggle="tab">Links</a></li>
+              <div class="clear"></div>
+              <div class="twitter-facebook">
+                <a href="https://twitter.com/share" class="twitter-share-button"></a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              </div>
+            </ul>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="step-by-step">
+              <div class="main-content">
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step1: Railsプロジェクトを新規作成する
+                </div>
+                <div class="node program">
+                  <pre><code>$ rails new backbone-keijiban</code></pre>
+                </div>
+                <div class="node text">
+                  Railsの新規プロジェクトを作成します。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/1.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step2: 利用するgemをGemfileに追加して、bundle install する。
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          Gemfile
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff1" aria-controls="diff1" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all1" aria-controls="all1" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff1">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr class="js-expandable-line" data-position="0">
+                                <td class="blob-num blob-num-expandable" colspan="2">
+                                </td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -21,23 +21,58
+                                @@ gem 'jbuilder', '~&gt; 2.0'</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="21" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L21">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="21" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R21">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c"># bundle exec rake doc:rails
+                                generates the API under doc/api.</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="22" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L22">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="22" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R22">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>sdoc<span class=
+                                "pl-pds">'</span></span>, <span class="pl-s"><span class=
+                                "pl-pds">'</span>~&gt; 0.4.0<span class="pl-pds">'</span></span>,
+                                <span class="pl-c1">group:</span> <span class=
+                                "pl-c1">:doc</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="23" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L23">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="23" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R23">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="24" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L24">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># Use ActiveModel has_secure_password</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="25" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L25">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># gem 'bcrypt', '~&gt;
+                                3.1.7'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="24" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R24">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>bootstrap-sass<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="25" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R25">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>font-awesome-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="26" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R26">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>backbone-on-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="27" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R27">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class=
+                                "pl-pds">'</span>backbone-relational-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="28" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R28">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>tilt-jade<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="29" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R29">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>haml-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="26" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L26">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="30" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R30">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="27" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L27">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># Use Unicorn as the app
+                                server</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="28" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L28">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># gem
+                                'unicorn'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="29" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L29">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="30" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L30">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># Use Capistrano for
+                                deployment</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="31" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L31">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-<span class="pl-c"># gem 'capistrano-rails', group:
+                                :development</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="32" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L32">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="33" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L33">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-group <span class="pl-c1">:development</span>,
+                                <span class="pl-c1">:test</span> <span class=
+                                "pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="34" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L34">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="pl-c"># Call 'byebug' anywhere in the
+                                code to stop execution and get a debugger console</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="35" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L35">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>byebug<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="36" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L36">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="37" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L37">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="pl-c"># Access an IRB console on
+                                exception pages or by using &lt;%= console %&gt; in
+                                views</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="38" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L38">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>web-console<span class=
+                                "pl-pds">'</span></span>, <span class="pl-s"><span class=
+                                "pl-pds">'</span>~&gt; 2.0<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="39" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L39">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">-</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="40" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L40">
+                                </td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="pl-c"># Spring speeds up development
+                                by keeping your application running in the background. Read more:
+                                https://github.com/rails/spring</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="31" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R31">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+group <span class="pl-c1">:test</span>, <span class=
+                                "pl-c1">:development</span> <span class="pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="32" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R32">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># Unit Test</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="33" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R33">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>rspec-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="34" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R34">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>rspec-activemodel-mocks<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="35" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R35">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>shoulda-matchers<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="36" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R36">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="37" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R37">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># Integration
+                                Test</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="38" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R38">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>turnip<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="39" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R39">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>capybara<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="40" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R40">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>capybara-webkit<span class=
+                                "pl-pds">'</span></span>, <span class="pl-s"><span class=
+                                "pl-pds">'</span>~&gt; 1.4.1<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="41" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R41">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>selenium-webdriver<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="42" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R42">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>rack-test<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="43" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R43">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="44" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R44">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># Test
+                                Data(Factory)</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="45" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R45">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>factory_girl_rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="46" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R46">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>faker<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="47" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R47">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>fabrication<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="48" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R48">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>database_rewinder<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="49" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R49">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="50" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R50">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># Convenient
+                                Tools</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="51" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R51">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>guard-rspec<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="52" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R52">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>launchy<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="41" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L41">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="53" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R53">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>spring<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="54" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R54">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="55" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R55">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># pry-debug</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="56" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R56">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>pry-rails<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="57" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R57">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>pry-doc<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="58" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R58">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>pry-stack_explorer<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="59" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R59">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>pry-byebug<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="60" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R60">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="61" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R61">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># debug tools</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="62" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R62">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>hirb<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="63" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R63">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>hirb-unicode<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="64" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R64">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>tapp<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="65" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R65">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>awesome_print<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="66" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R66">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>quiet_assets<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="67" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R67">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>annotate<span class=
+                                "pl-pds">'</span></span>, <span class="pl-c1">git:</span> <span class=
+                                "pl-s"><span class=
+                                "pl-pds">'</span>git://github.com/ctran/annotate_models.git<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="68" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R68">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>timecop<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="69" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R69">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="70" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R70">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>web-console<span class=
+                                "pl-pds">'</span></span>, <span class="pl-s"><span class=
+                                "pl-pds">'</span>~&gt; 2.0<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="71" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R71">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>meta_request<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="72" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R72">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>better_errors<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="73" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R73">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>binding_of_caller<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="74" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R74">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># gem
+                                'xray-rails'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="75" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R75">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-c"># gem
+                                'rack-mini-profiler'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="76" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R76">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">gem</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>rails-footnotes<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="42" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L42">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="77" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R77">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">end</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="43" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478L43">
+                                </td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="78" id="diff-8b7db4d5cc4b8f6dc8feb7030baa2478R78">
+                                </td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all1">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">source
+                                <span class="pl-s"><span class=
+                                "pl-pds">'</span>https://rubygems.org<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                <span class="pl-c"># Bundle edge Rails instead: gem 'rails', github:
+                                'rails/rails'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC5">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>rails<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>4.2.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC6">
+                                <span class="pl-c"># Use sqlite3 as the database for Active
+                                Record</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC7">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>sqlite3<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC8">
+                                <span class="pl-c"># Use SCSS for stylesheets</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC9">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>sass-rails<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>~&gt; 5.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC10">
+                                <span class="pl-c"># Use Uglifier as compressor for JavaScript
+                                assets</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC11">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>uglifier<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>&gt;= 1.3.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC12">
+                                <span class="pl-c"># Use CoffeeScript for .coffee assets and
+                                views</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>coffee-rails<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>~&gt; 4.1.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="14" id="L14">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC14">
+                                <span class="pl-c"># See https://github.com/sstephenson/execjs#readme
+                                for more supported runtimes</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="15" id="L15">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC15">
+                                <span class="pl-c"># gem 'therubyracer', platforms: :ruby</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="16" id="L16">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC16"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="17" id="L17">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC17">
+                                <span class="pl-c"># Use jquery as the JavaScript library</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="18" id="L18">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC18">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>jquery-rails<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="19" id="L19">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC19">
+                                <span class="pl-c"># Build JSON APIs with ease. Read more:
+                                https://github.com/rails/jbuilder</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="20" id="L20">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC20">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>jbuilder<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>~&gt; 2.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="21" id="L21">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC21">
+                                <span class="pl-c"># bundle exec rake doc:rails generates the API under
+                                doc/api.</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="22" id="L22">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC22">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>sdoc<span class="pl-pds">'</span></span>, <span class=
+                                "pl-s"><span class="pl-pds">'</span>~&gt; 0.4.0<span class=
+                                "pl-pds">'</span></span>, <span class="pl-c1">group:</span>
+                                <span class="pl-c1">:doc</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="23" id="L23">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC23"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="24" id="L24">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC24">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>bootstrap-sass<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="25" id="L25">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC25">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>font-awesome-rails<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="26" id="L26">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC26">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>backbone-on-rails<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="27" id="L27">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC27">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>backbone-relational-rails<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="28" id="L28">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC28">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>tilt-jade<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="29" id="L29">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC29">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>haml-rails<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="30" id="L30">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC30"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="31" id="L31">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC31">group
+                                <span class="pl-c1">:test</span>, <span class=
+                                "pl-c1">:development</span> <span class="pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="32" id="L32">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC32">
+                                <span class="pl-c"># Unit Test</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="33" id="L33">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC33">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>rspec-rails<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="34" id="L34">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC34">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>rspec-activemodel-mocks<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="35" id="L35">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC35">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>shoulda-matchers<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="36" id="L36">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC36"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="37" id="L37">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC37">
+                                <span class="pl-c"># Integration Test</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="38" id="L38">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC38">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>turnip<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="39" id="L39">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC39">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>capybara<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="40" id="L40">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC40">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>capybara-webkit<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>~&gt; 1.4.1<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="41" id="L41">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC41">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>selenium-webdriver<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="42" id="L42">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC42">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>rack-test<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="43" id="L43">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC43"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="44" id="L44">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC44">
+                                <span class="pl-c"># Test Data(Factory)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="45" id="L45">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC45">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>factory_girl_rails<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="46" id="L46">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC46">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>faker<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="47" id="L47">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC47">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>fabrication<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="48" id="L48">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC48">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>database_rewinder<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="49" id="L49">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC49"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="50" id="L50">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC50">
+                                <span class="pl-c"># Convenient Tools</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="51" id="L51">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC51">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>guard-rspec<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="52" id="L52">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC52">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>launchy<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="53" id="L53">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC53">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>spring<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="54" id="L54">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC54"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="55" id="L55">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC55">
+                                <span class="pl-c"># pry-debug</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="56" id="L56">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC56">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>pry-rails<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="57" id="L57">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC57">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>pry-doc<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="58" id="L58">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC58">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>pry-stack_explorer<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="59" id="L59">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC59">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>pry-byebug<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="60" id="L60">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC60"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="61" id="L61">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC61">
+                                <span class="pl-c"># debug tools</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="62" id="L62">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC62">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>hirb<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="63" id="L63">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC63">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>hirb-unicode<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="64" id="L64">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC64">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>tapp<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="65" id="L65">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC65">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>awesome_print<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="66" id="L66">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC66">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>quiet_assets<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="67" id="L67">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC67">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>annotate<span class="pl-pds">'</span></span>,
+                                <span class="pl-c1">git:</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>git://github.com/ctran/annotate_models.git<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="68" id="L68">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC68">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>timecop<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="69" id="L69">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC69"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="70" id="L70">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC70">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>web-console<span class="pl-pds">'</span></span>,
+                                <span class="pl-s"><span class="pl-pds">'</span>~&gt; 2.0<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="71" id="L71">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC71">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>meta_request<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="72" id="L72">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC72">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>better_errors<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="73" id="L73">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC73">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>binding_of_caller<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="74" id="L74">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC74">
+                                <span class="pl-c"># gem 'xray-rails'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="75" id="L75">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC75">
+                                <span class="pl-c"># gem 'rack-mini-profiler'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="76" id="L76">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC76">
+                                <span class="pl-k">gem</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>rails-footnotes<span class=
+                                "pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="77" id="L77">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC77">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="78" id="L78">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC78"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node text">
+                  bootstrap-sass、backbone-on-rails、テスト系、デバッグ系のgemを追加します。その後は、$ bundle installします。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/2.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step3: Board Modelを作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails g model board name:string</code></pre>
+                </div>
+                <div class="node text">
+                  $ rails g model board name:string でModelを作成します。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/3.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step4: BoardsController を作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails g controller boards</code></pre>
+                </div>
+                <div class="node text">
+                  $ rails g controller boards で BoardsController を作成します。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/4.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step5: Comment Model を作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails g model comment name:string content:text board:references</code></pre>
+                </div>
+                <div class="node text">
+                  Comment Model を作成する。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/5.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step6: CommentsController を作成する。
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails g controller comments</code></pre>
+                </div>
+                <div class="node text">
+                  CommentsController を新規作成する。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/6.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step7: DBを作成する(migrationする)
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rake db:migrate</code></pre>
+                </div>
+                <div class="node text">
+                  データベースを作成します。db/development.sqlite3が作成されます。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/7.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step8: associationでboard has many comments を定義する
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          app/models/board.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff2" aria-controls="diff2" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all2" aria-controls="all2" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff2">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,2 +1,3
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">class</span> <span class=
+                                "pl-en">Board <span class="pl-e">
+                                ActiveRecord::Base</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR2"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+  has_many <span class=
+                                "pl-c1">:comments</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL2"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR3"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">end</span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all2">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-k">class</span> <span class="pl-en">Board <span class=
+                                "pl-e">&lt; ActiveRecord::Base</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2">　has_many
+                                <span class="pl-c1">:comments</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node text">
+                  board <- comments という関係なので、それを定義します。
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step9: validationを定義する
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          app/models/board.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff3" aria-controls="diff3" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all3" aria-controls="all3" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff3">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">class</span> <span class=
+                                "pl-en">Board <span class="pl-e">&lt;
+                                ActiveRecord::Base</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL2"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR2"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner">&nbsp;&nbsp;has_many <span class=
+                                "pl-c1">:comments</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR3"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ validates <span class="pl-c1">:name</span>,
+                                <span class="pl-c1">presence:</span> <span class=
+                                "pl-c1">true</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL3"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR4"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">end</span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all3">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-k">class</span> <span class="pl-en">Board <span class=
+                                "pl-e">&lt; ActiveRecord::Base</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;has_many
+                                <span class="pl-c1">:comments</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
+                                <span class="pl-c1">:name</span>, <span class="pl-c1">presence:</span>
+                                <span class="pl-c1">true</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          app/models/comment.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff4" aria-controls="diff4" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all4" aria-controls="all4" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff4">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49L0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49R0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49L1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49R1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">class</span> <span class=
+                                "pl-en">Comment <span class="pl-e">&lt;
+                                ActiveRecord::Base</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49L2"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49R2"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner">&nbsp;&nbsp;belongs_to <span class=
+                                "pl-c1">:board</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49R3"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ validates <span class="pl-c1">:content</span>,
+                                <span class="pl-c1">presence:</span> <span class=
+                                "pl-c1">true</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49L3"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-3b4cc13a815e6a32db590e41f5d00d49R4"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-k">end</span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all4">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-k">class</span> <span class="pl-en">Comment
+                                <span class="pl-e">&lt; ActiveRecord::Base</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;belongs_to
+                                <span class="pl-c1">:board</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
+                                <span class="pl-c1">:content</span>, <span class=
+                                "pl-c1">presence:</span> <span class="pl-c1">true</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node text">
+                  Board, Comment それぞれにvalidationを定義します。presenceは必須という意味です。
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step10: Fabricator, Fakerを使ってseedsファイルを記述 し、rake db:seedする
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          db/seeds.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff5" aria-controls="diff5" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all5" aria-controls="all5" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff5">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr class="js-expandable-line" data-position="0">
+                                <td class="blob-num blob-num-expandable" colspan="2">
+                                </td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -5,3 +5,9
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cL5"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cR5"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c">#</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cL6"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cR6"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c"># cities = City.create([{ name:
+                                'Chicago' }, { name: 'Copenhagen' }])</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cL7"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cR7"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c"># Mayor.create(name: 'Emanuel',
+                                city: cities.first)</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="8" id="diff-f7a25bc30a409fc77050703fc048ca8cR8"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="9" id="diff-f7a25bc30a409fc77050703fc048ca8cR9"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-c1">Fabricator</span>(<span class=
+                                "pl-c1">:board</span>) <span class="pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="10" id="diff-f7a25bc30a409fc77050703fc048ca8cR10">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ name {<span class=
+                                "pl-c1">Faker</span>::<span class="pl-c1">Name</span>.title}</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="11" id="diff-f7a25bc30a409fc77050703fc048ca8cR11">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-k">end</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="12" id="diff-f7a25bc30a409fc77050703fc048ca8cR12">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="13" id="diff-f7a25bc30a409fc77050703fc048ca8cR13">
+                                </td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+<span class="pl-c1">10</span>.times {<span class=
+                                "pl-c1">Fabricate</span>(<span class=
+                                "pl-c1">:board</span>)}</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all5">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-c"># This file should contain all the record creation
+                                needed to seed the database with its default values.</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2">
+                                <span class="pl-c"># The data can then be loaded with the rake db:seed
+                                (or created alongside the db with db:setup).</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">
+                                <span class="pl-c">#</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                <span class="pl-c"># Examples:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC5">
+                                <span class="pl-c">#</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC6">
+                                <span class="pl-c"># cities = City.create([{ name: 'Chicago' }, { name:
+                                'Copenhagen' }])</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC7">
+                                <span class="pl-c"># Mayor.create(name: 'Emanuel', city:
+                                cities.first)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC8"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC9">
+                                <span class="pl-c1">Fabricator</span>(<span class=
+                                "pl-c1">:board</span>) <span class="pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC10">&nbsp;&nbsp;name
+                                {<span class="pl-c1">Faker</span>::<span class=
+                                "pl-c1">Name</span>.title}</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC11">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC12"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                <span class="pl-c1">10</span>.times {<span class=
+                                "pl-c1">Fabricate</span>(<span class="pl-c1">:board</span>)}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rake db:seed</code></pre>
+                </div>
+                <div class="text">
+                  Fabricator, Fakerという便利gemを使って、テストデータを挿入します。記述したら、$ rake db:seedします。
+                </div>
+              </div>
+              <div class="similar-course">
+                <div class="main-content">
+                  <a href="course2.html" class="next-course hvr-reveal">
+                    <div class="title inline-block middle">Backbone on Rails で作る掲示板サービス #2</div>
+                    <div class="text inline-block middle">: Next Course >></div>
+                  </a>
+                  <a href="" class="pre-course">
+                  </a>
+                </div>
+              </div>
+              <div class="tracks-content">
+                <div class="main-content">
+                  <div class="tracks backbone">
+                    <div class="tracks-image table">
+                      <div class="table-cell">
+                        <img src="img/backbone.png" height="45">
+                      </div>
+                    </div>
+                    <div class="tracks-name">backbone-on-rails</div>
+                    <div class="track-content">
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #1</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #2</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #3</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #4</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #5</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="summary">
+              <div class="main-content">
+                <table class="summary-table">
+                  <tbody>
+                    <tr>
+                      <td class="title">はじめに</td>
+                      <td class="text">
+                        HTMLとは、HyperText Markup Languageの略であり、文書の論理構造や表示の仕方などを記述することができます。Webページの「情報」を記述する言語です。ただの文字列に 「意味」と「構造」を定義していくものです。WEBの第一歩として学習していきましょう。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">目的・ゴール</td>
+                      <td class="text">
+                        ・必要最小限のHTMLタグからHTMLの仕組みを理解する
+                        <br>
+                        ・WEBページを作成する上で、自分でHTMLタグを利用できるようなる
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">見本URL</td>
+                      <td class="text">
+                        <a href="">http://cyllabus-html-course.azurewebsites.net/</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">対象者</td>
+                      <td class="text">
+                        ・自分でWEBサイトを構築してみたいと思っている人
+                        <br>
+                        ・インターネットの仕組みを理解したい人
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">前提知識</td>
+                      <td class="text">
+                        特に必要ありませんが、ローマ字とタイピングに慣れていることが好ましいです。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">学習方法</td>
+                      <td class="text">
+                        手を動かしながら学習しましょう。実際に、エディタを開き、プログラムを写し(※できるだ けコピペしないこと)、保存して、実行する(エラーだった場合は直す)。面倒かもしれません が、繰り返しやることで力がつきます。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">作業環境</td>
+                      <td class="text">
+                        ・Macbook Air
+                        <br>
+                        ・Mac OS X 10.9.5
+                        <br>
+                        ・Sublime Text 2.0.2
+                        <br>
+                        ・Chrome 38.0.2125.111
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">構成</td>
+                      <td class="text">
+                        1. rails で新規プロジェクト作成
+                        <br>
+                        2. Gemfileを更新して、bundle install
+                        <br>
+                        3. turbolinksをオフにする
+                        <br>
+                        4. board model を作成
+                        <br>
+                        5. board controller を作成
+                        <br>
+                        6. comment model を作成
+                        <br>
+                        7. comment controller を作成
+                        <br>
+                        8. migration する
+                        <br>
+                        9. association を実装する
+                        <br>
+                        10. validation を実装する
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="links">
+              <div class="main-content">
+                <div class="links-content">
+                  <div class="step-num">Step1</div>
+                  <div class="link"><a href="">backbone-on-railsを使ってTodosを作り直してみた - 一から勉強させてください( ̅ω ̅;)</a></div>
+                  <div class="step-num">Step2</div>
+                  <div class="link"><a href="">Backbone.js - backbone-on-railsでモデル一覧を表示する。 - Qiita</a></div>
+                  <div class="step-num">Step3</div>
+                  <div class="link"><a href="">Rails3.2とBackbone.jsでToDoアプリを作ってみた~backbone-on-rails | Scimpr Blog</a></div>
+                  <div class="step-num">Step4</div>
+                  <div class="link"><a href="">meleyal/backbone-on-rails</a></div>
+                  <div class="step-num">Step5</div>
+                  <div class="link"><a href="">Backbone.jsのlistenToについて - 車輪を再発明 / koba04の日記</a></div>
+                  <div class="step-num">Step6</div>
+                  <div class="link"><a href="">Using Arrays and Objects in Backbone.js Models - Steven Schobert</a></div>
+                  <div class="step-num">Step7</div>
+                  <div class="link"><a href="">JavaScript : Backbone.js #5 - Modelのサーバ連携 : typeOf 'aki_mana'</a></div>
+                  <div class="step-num">Step8</div>
+                  <div class="link"><a href="">Backbone.js入門 「Model」 - Qiita</a></div>
+                  <div class="step-num">Step9</div>
+                  <div class="link"><a href="">Backbone.jsに入門してみる【サーバー通信編 (Model, Collection)】 - yutaponのブログ</a></div>
+                  <div class="step-num">Step10</div>
+                  <div class="link last"><a href="">Backbone.jsでのサーバーサイドデータ→クライアントサイドデータ変換 - Qiita</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="copyright">Copyright © 2015 Daraf, Inc. All rights reserved.</div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript">
+    //チェック
+    $(function(){
+      $(".heading .check").click(function(){
+        if($(this).attr("class")=="check"){
+        $(this).removeClass("check").addClass("checked");}else{
+        $(this).removeClass("checked").addClass("check");}
+        });
+    });
+  </script>
+</body>
+</html>

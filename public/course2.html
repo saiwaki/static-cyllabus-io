@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cyllabus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/hover-min.css">
+  <link rel="stylesheet" type="text/css" href="css/github-diff.css">
+  <link rel="stylesheet" href="highlight/styles/github.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/courses.css">
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="highlight/highlight.pack.js"></script>
+</head>
+<body class="courses show">
+  <div id="wrapper">
+    <header id="header">
+      <nav>
+        <div class="main-content">
+          <div class="header-left left">
+            <div class="table">
+              <div class="table-cell">
+                <a href="" class="logo">
+                  <img src="img/logo.png">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header-right right">
+            <ul>
+              <li>
+                <a href="">Courses</a>
+              </li>
+              <li>
+                <a href="">Tracks</a>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </nav>
+    </header>
+    <div id="main">
+      <div class="main-content">
+        <div class="courses-head">
+          <div class="date-by-views table">
+            <div class="date-by table-cell">
+              Posted May 11, 2015 by
+              <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+            </div>
+            <div class="views table-cell">
+              <span class="num">10000</span>views
+            </div>
+          </div>
+          <div class="courses-title">
+            <h1>Backbone on Rails で作る掲示板サービス #2</h1>
+          </div>
+          <div class="courses-tag">
+            <a href="" class="tag">タグ</a>
+            <a href="" class="tag">タグ</a>
+          </div>
+        </div>
+      </div>
+      <div class="courses-content">
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <div class="nav-tabs-content">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="courses" class="active"><a href="#step-by-step" aria-controls="step-by-step" role="tab" data-toggle="tab">Step-by-step</a></li>
+              <li role="courses"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
+              <li role="courses"><a href="#urls" aria-controls="urls" role="tab" data-toggle="tab">Urls</a></li>
+              <div class="clear"></div>
+              <div class="tweeter-facebook">
+              </div>
+            </ul>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="step-by-step">
+              <div class="main-content">
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step11: rails console でモデルを確認
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails console<br>> Board<br>> Comment</code></pre>
+                </div>
+                <div class="node image">
+                  <img src="img/rails/11.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step12: boardのseedデータを確認する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails console <= 以下は、起動したままで続ける<br>> Board.all</code></pre>
+                </div>
+                <div class="node text">
+                  seedデータが10件入っているのが確認できると思います。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/12.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step13: commentテーブルは空であること確認
+                </div>
+                <div class="node program">
+                  <pre><code>> Comment.all</code></pre>
+                </div>
+                <div class="node text">
+                  commentテーブルの中身は空です。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/13.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step14: boardを1件作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼> Board.new(name: “Today’s tech news”)<br>> board.save<br>> Board.last</code></pre>
+                </div>
+                <div class="node text">
+                  boardを新規作成する。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/14.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step15: commentを作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼> board.comments<br>> comment = board.comments.new(name: “saiwaki”, content: “cyllabus relaunch”)<br>> comment.save<br>> Comment.all<br>> exit</code></pre>
+                </div>
+                <div class="node text">
+                  先ほど作成した、boardのcommentを作成する。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/15.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step16: MainControllerを作成する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails g controller main index</code></pre>
+                </div>
+                <div class="node text">
+                  このindexページに実装していきます。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/16.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step17: サーバーを起動する
+                </div>
+                <div class="node program">
+                  <pre><code>￼$ rails s</code></pre>
+                </div>
+                <div class="node text">
+                  サーバーを起動した後は、ブラウザで、localhost:3000/main/index にアクセスします。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/17.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step18: root urlを定義する
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          config/routes.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff1" aria-controls="diff1" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all1" aria-controls="all1" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff1">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136L0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136R0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,5 +1,5
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136L1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136R1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class=
+                                "pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136L2"></td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- <span class="x x-first x-last">get</span>
+                                <span class="pl-s"><span class="pl-pds">'</span>main<span class=
+                                "x x-first x-last">/</span>index<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136R2"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="x x-first">root</span> <span class=
+                                "pl-c1 x">to:</span> <span class="x x-last"></span><span class=
+                                "pl-s"><span class="pl-pds">'</span>main<span class=
+                                "x x-first x-last">#</span>index<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136L3"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136R3"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136L4"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136R4"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c">&nbsp;&nbsp;# The priority is based upon order
+                                of creation: first created -&gt; highest priority.</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-21497849d8f00507c9c8dcaf6288b136L5"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-21497849d8f00507c9c8dcaf6288b136R5"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c">&nbsp;&nbsp;# See how all your routes lay out
+                                with "rake routes".</span></span></td>
+                              </tr>
+
+                              <tr class="js-expandable-line">
+                                <td class="blob-num blob-num-expandable" colspan="2">
+                                </td>
+
+                                <td class="blob-code blob-code-expandable"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all1">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;root
+                                <span class="pl-c1">to:</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>main#index<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                <span class="pl-c">&nbsp;&nbsp;# The priority is based upon order of creation:
+                                first created -&gt; highest priority.</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC5">
+                                <span class="pl-c">&nbsp;&nbsp;# See how all your routes lay out with "rake
+                                routes".</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC6"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC7">
+                                <span class="pl-c">&nbsp;&nbsp;# You can have the root of your site routed with
+                                "root"</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC8">
+                                <span class="pl-c">&nbsp;&nbsp;# root 'welcome#index'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC9"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC10">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of regular route:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC11">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id' =&gt;
+                                'catalog#view'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC12"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of named route that can be invoked with
+                                purchase_url(id: product.id)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="14" id="L14">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC14">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id/purchase' =&gt;
+                                'catalog#purchase', as: :purchase</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="15" id="L15">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC15"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="16" id="L16">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC16">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route (maps HTTP verbs to
+                                controller actions automatically):</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="17" id="L17">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC17">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="18" id="L18">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC18"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="19" id="L19">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC19">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with options:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="20" id="L20">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC20">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="21" id="L21">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC21">
+                                <span class="pl-c">&nbsp;&nbsp;# member do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="22" id="L22">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC22">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'short'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="23" id="L23">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC23">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="24" id="L24">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC24">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="25" id="L25">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC25">
+                                <span class="pl-c">&nbsp;&nbsp;#</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="26" id="L26">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC26">
+                                <span class="pl-c">&nbsp;&nbsp;# collection do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="27" id="L27">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC27">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'sold'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="28" id="L28">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC28">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="29" id="L29">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC29">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="30" id="L30">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC30"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="31" id="L31">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC31">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="32" id="L32">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC32">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="33" id="L33">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC33">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments, :sales</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="34" id="L34">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC34">
+                                <span class="pl-c">&nbsp;&nbsp;# resource :seller</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="35" id="L35">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC35">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="36" id="L36">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC36"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="37" id="L37">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC37">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with more complex
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="38" id="L38">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC38">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="39" id="L39">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC39">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="40" id="L40">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC40">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :sales do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="41" id="L41">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC41">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'recent', on: :collection</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="42" id="L42">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC42">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="43" id="L43">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC43">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="44" id="L44">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC44"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="45" id="L45">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC45">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with concerns:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="46" id="L46">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC46">
+                                <span class="pl-c">&nbsp;&nbsp;# concern :toggleable do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="47" id="L47">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC47">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="48" id="L48">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC48">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="49" id="L49">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC49">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :posts, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="50" id="L50">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC50">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :photos, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="51" id="L51">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC51"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="52" id="L52">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC52">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route within a
+                                namespace:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="53" id="L53">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC53">
+                                <span class="pl-c">&nbsp;&nbsp;# namespace :admin do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="54" id="L54">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC54">
+                                <span class="pl-c">&nbsp;&nbsp;# &nbsp;&nbsp;# Directs /admin/products/* to
+                                Admin::ProductsController</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="55" id="L55">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC55">
+                                <span class="pl-c">&nbsp;&nbsp;# #
+                                (app/controllers/admin/products_controller.rb)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="56" id="L56">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC56">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="57" id="L57">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC57">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="58" id="L58">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC58">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node text">
+                  localhost:3000 にアクセスします。
+                </div>
+                <div class="node image">
+                  <img src="img/rails/18.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step19: Boardのルーティングを定義する
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          config/routes.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff2" aria-controls="diff2" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all2" aria-controls="all2" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff2">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136L0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136R0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,4 +1,7
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136L1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136R1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class=
+                                "pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136R2"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136R3"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ resources <span class="pl-c1">:boards</span>,
+                                <span class="pl-c1">format:</span> <span class=
+                                "pl-c1">:json</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136R4"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136L2"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-21497849d8f00507c9c8dcaf6288b136R5"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner">root <span class="pl-c1">to:</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>main#index<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136L3"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="6" id="diff-21497849d8f00507c9c8dcaf6288b136R6"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136L4"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="7" id="diff-21497849d8f00507c9c8dcaf6288b136R7"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class="pl-c"># The priority is based upon order
+                                of creation: first created -&gt; highest priority.</span></span></td>
+                              </tr>
+
+                              <tr class="js-expandable-line">
+                                <td class="blob-num blob-num-expandable" colspan="2">
+                                </td>
+
+                                <td class="blob-code blob-code-expandable"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all2">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;resources
+                                <span class="pl-c1">:boards</span>, <span class="pl-c1">format:</span>
+                                <span class="pl-c1">:json</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC5">&nbsp;&nbsp;root
+                                <span class="pl-c1">to:</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>main#index<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC6"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC7">
+                                <span class="pl-c">&nbsp;&nbsp;# The priority is based upon order of creation:
+                                first created -&gt; highest priority.</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC8">
+                                <span class="pl-c">&nbsp;&nbsp;# See how all your routes lay out with "rake
+                                routes".</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC9"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC10">
+                                <span class="pl-c">&nbsp;&nbsp;# You can have the root of your site routed with
+                                "root"</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC11">
+                                <span class="pl-c">&nbsp;&nbsp;# root 'welcome#index'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC12"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of regular route:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="14" id="L14">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC14">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id' =&gt;
+                                'catalog#view'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="15" id="L15">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC15"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="16" id="L16">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC16">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of named route that can be invoked with
+                                purchase_url(id: product.id)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="17" id="L17">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC17">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id/purchase' =&gt;
+                                'catalog#purchase', as: :purchase</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="18" id="L18">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC18"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="19" id="L19">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC19">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route (maps HTTP verbs to
+                                controller actions automatically):</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="20" id="L20">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC20">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="21" id="L21">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC21"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="22" id="L22">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC22">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with options:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="23" id="L23">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC23">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="24" id="L24">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC24">
+                                <span class="pl-c">&nbsp;&nbsp;# member do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="25" id="L25">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC25">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'short'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="26" id="L26">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC26">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="27" id="L27">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC27">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="28" id="L28">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC28">
+                                <span class="pl-c">&nbsp;&nbsp;#</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="29" id="L29">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC29">
+                                <span class="pl-c">&nbsp;&nbsp;# collection do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="30" id="L30">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC30">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'sold'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="31" id="L31">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC31">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="32" id="L32">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC32">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="33" id="L33">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC33"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="34" id="L34">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC34">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="35" id="L35">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC35">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="36" id="L36">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC36">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments, :sales</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="37" id="L37">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC37">
+                                <span class="pl-c">&nbsp;&nbsp;# resource :seller</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="38" id="L38">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC38">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="39" id="L39">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC39"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="40" id="L40">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC40">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with more complex
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="41" id="L41">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC41">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="42" id="L42">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC42">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="43" id="L43">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC43">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :sales do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="44" id="L44">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC44">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'recent', on: :collection</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="45" id="L45">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC45">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="46" id="L46">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC46">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="47" id="L47">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC47"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="48" id="L48">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC48">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with concerns:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="49" id="L49">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC49">
+                                <span class="pl-c">&nbsp;&nbsp;# concern :toggleable do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="50" id="L50">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC50">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="51" id="L51">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC51">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="52" id="L52">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC52">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :posts, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="53" id="L53">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC53">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :photos, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="54" id="L54">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC54"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="55" id="L55">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC55">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route within a
+                                namespace:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="56" id="L56">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC56">
+                                <span class="pl-c">&nbsp;&nbsp;# namespace :admin do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="57" id="L57">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC57">
+                                <span class="pl-c">&nbsp;&nbsp;# # Directs /admin/products/* to
+                                Admin::ProductsController</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="58" id="L58">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC58">
+                                <span class="pl-c">&nbsp;&nbsp;# #
+                                (app/controllers/admin/products_controller.rb)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="59" id="L59">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC59">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="60" id="L60">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC60">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="61" id="L61">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC61">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node image">
+                  <img src="img/rails/19.png">
+                </div>
+                <div class="node heading">
+                  <div class="check"><i class="fa fa-check"></i></div>
+                  Step20: Commentのルーティングを定義する
+                </div>
+                <div class="node diff">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="nav-tabs-content file-header">
+                      <div class="file-name table">
+                        <div class="table-cell">
+                          config/routes.rb
+                        </div>
+                      </div>
+                      <div class="switch-btn table">
+                        <ul class="nav nav-tabs table-cell" role="tablist">
+                          <li role="diff" class="active">
+                            <a href="#diff3" aria-controls="diff3" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                          </li>
+                          <li role="diff">
+                            <a href="#all3" aria-controls="all3" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                          </li>
+                          <div class="clear"></div>
+                        </ul>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="diff3">
+                        <div class="data highlight blob-wrapper">
+                          <table class="diff-table tab-size-8">
+                            <tbody>
+                              <tr data-position="0">
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136L0"></td>
+
+                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                "..." id="diff-21497849d8f00507c9c8dcaf6288b136R0"></td>
+
+                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,6 +1,8
+                                @@</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136L1"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="1" id="diff-21497849d8f00507c9c8dcaf6288b136R1"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"><span class=
+                                "pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136L2"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="2" id="diff-21497849d8f00507c9c8dcaf6288b136R2"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-deletion js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136L3"></td>
+
+                                <td class="blob-num blob-num-deletion empty-cell"></td>
+
+                                <td class="blob-code blob-code-deletion"><span class=
+                                "blob-code-inner">- resources <span class="pl-c1">:boards</span>,
+                                <span class="pl-c1">format:</span> <span class=
+                                "pl-c1">:json</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="3" id="diff-21497849d8f00507c9c8dcaf6288b136R3"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ resources <span class="pl-c1">:boards</span>,
+                                <span class="pl-c1">format:</span> <span class="pl-c1">:json</span>
+                                <span class="pl-k">do</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136R4"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ resource <span class="pl-c1">:comments</span>,
+                                <span class="pl-c1">only:</span> [<span class="pl-c1">:create</span>,
+                                <span class="pl-c1">:show</span>]</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                <td class="blob-num blob-num-addition js-linkable-line-number"
+                                data-line-number="5" id="diff-21497849d8f00507c9c8dcaf6288b136R5"></td>
+
+                                <td class="blob-code blob-code-addition"><span class=
+                                "blob-code-inner">+ <span class="pl-k">end</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="4" id="diff-21497849d8f00507c9c8dcaf6288b136L4"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="6" id="diff-21497849d8f00507c9c8dcaf6288b136R6"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="5" id="diff-21497849d8f00507c9c8dcaf6288b136L5"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="7" id="diff-21497849d8f00507c9c8dcaf6288b136R7"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner">root <span class="pl-c1">to:</span> <span class=
+                                "pl-s"><span class="pl-pds">'</span>main#index<span class=
+                                "pl-pds">'</span></span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="6" id="diff-21497849d8f00507c9c8dcaf6288b136L6"></td>
+
+                                <td class="blob-num blob-num-context js-linkable-line-number"
+                                data-line-number="8" id="diff-21497849d8f00507c9c8dcaf6288b136R8"></td>
+
+                                <td class="blob-code blob-code-context"><span class=
+                                "blob-code-inner"></span></td>
+                              </tr>
+
+                              <tr class="js-expandable-line">
+                                <td class="blob-num blob-num-expandable" colspan="2">
+                                </td>
+
+                                <td class="blob-code blob-code-expandable"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="all3">
+                        <div class="blob-wrapper data type-ruby">
+                          <table class="highlight tab-size-8 js-file-line-container">
+                            <tbody>
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                <span class="pl-c1">Rails</span>.application.routes.draw <span class=
+                                "pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC2"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;resources
+                                <span class="pl-c1">:boards</span>, <span class="pl-c1">format:</span>
+                                <span class="pl-c1">:json</span> <span class="pl-k">do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC4">&nbsp;&nbsp;&nbsp;&nbsp;resource
+                                <span class="pl-c1">:comments</span>, <span class="pl-c1">only:</span>
+                                [<span class="pl-c1">:create</span>, <span class=
+                                "pl-c1">:show</span>]</td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC5">
+                                <span class="pl-k">&nbsp;&nbsp;end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC6"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC7">&nbsp;&nbsp;root
+                                <span class="pl-c1">to:</span> <span class="pl-s"><span class=
+                                "pl-pds">'</span>main#index<span class="pl-pds">'</span></span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC8"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC9">
+                                <span class="pl-c">&nbsp;&nbsp;# The priority is based upon order of creation:
+                                first created -&gt; highest priority.</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC10">
+                                <span class="pl-c">&nbsp;&nbsp;# See how all your routes lay out with "rake
+                                routes".</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC11"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC12">
+                                <span class="pl-c">&nbsp;&nbsp;# You can have the root of your site routed with
+                                "root"</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                <span class="pl-c">&nbsp;&nbsp;# root 'welcome#index'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="14" id="L14">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC14"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="15" id="L15">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC15">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of regular route:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="16" id="L16">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC16">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id' =&gt;
+                                'catalog#view'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="17" id="L17">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC17"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="18" id="L18">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC18">
+                                <span class="pl-c">&nbsp;&nbsp;# Example of named route that can be invoked with
+                                purchase_url(id: product.id)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="19" id="L19">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC19">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'products/:id/purchase' =&gt;
+                                'catalog#purchase', as: :purchase</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="20" id="L20">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC20"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="21" id="L21">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC21">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route (maps HTTP verbs to
+                                controller actions automatically):</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="22" id="L22">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC22">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="23" id="L23">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC23"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="24" id="L24">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC24">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with options:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="25" id="L25">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC25">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="26" id="L26">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC26">
+                                <span class="pl-c">&nbsp;&nbsp;# member do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="27" id="L27">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC27">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'short'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="28" id="L28">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC28">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="29" id="L29">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC29">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="30" id="L30">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC30">
+                                <span class="pl-c">&nbsp;&nbsp;#</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="31" id="L31">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC31">
+                                <span class="pl-c">&nbsp;&nbsp;# collection do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="32" id="L32">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC32">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'sold'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="33" id="L33">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC33">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="34" id="L34">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC34">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="35" id="L35">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC35"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="36" id="L36">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC36">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="37" id="L37">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC37">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="38" id="L38">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC38">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments, :sales</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="39" id="L39">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC39">
+                                <span class="pl-c">&nbsp;&nbsp;# resource :seller</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="40" id="L40">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC40">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="41" id="L41">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC41"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="42" id="L42">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC42">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with more complex
+                                sub-resources:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="43" id="L43">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC43">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="44" id="L44">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC44">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :comments</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="45" id="L45">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC45">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :sales do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="46" id="L46">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC46">
+                                <span class="pl-c">&nbsp;&nbsp;# get 'recent', on: :collection</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="47" id="L47">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC47">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="48" id="L48">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC48">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="49" id="L49">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC49"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="50" id="L50">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC50">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route with concerns:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="51" id="L51">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC51">
+                                <span class="pl-c">&nbsp;&nbsp;# concern :toggleable do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="52" id="L52">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC52">
+                                <span class="pl-c">&nbsp;&nbsp;# post 'toggle'</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="53" id="L53">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC53">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="54" id="L54">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC54">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :posts, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="55" id="L55">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC55">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :photos, concerns:
+                                :toggleable</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="56" id="L56">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC56"></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="57" id="L57">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC57">
+                                <span class="pl-c">&nbsp;&nbsp;# Example resource route within a
+                                namespace:</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="58" id="L58">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC58">
+                                <span class="pl-c">&nbsp;&nbsp;# namespace :admin do</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="59" id="L59">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC59">
+                                <span class="pl-c">&nbsp;&nbsp;# # Directs /admin/products/* to
+                                Admin::ProductsController</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="60" id="L60">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC60">
+                                <span class="pl-c">&nbsp;&nbsp;# #
+                                (app/controllers/admin/products_controller.rb)</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="61" id="L61">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC61">
+                                <span class="pl-c">&nbsp;&nbsp;# resources :products</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="62" id="L62">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC62">
+                                <span class="pl-c">&nbsp;&nbsp;# end</span></td>
+                              </tr>
+
+                              <tr>
+                                <td class="blob-num js-line-number" data-line-number="63" id="L63">
+                                </td>
+
+                                <td class="blob-code blob-code-inner js-file-line" id="LC63">
+                                <span class="pl-k">end</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="node image">
+                  <img src="img/rails/20.png">
+                </div>
+              </div>
+              <div class="similar-course">
+                <div class="main-content">
+                  <a href="" class="next-course hvr-reveal">
+                    <div class="title inline-block middle">Backbone on Rails で作る掲示板サービス #3</div>
+                    <div class="text inline-block middle">: Next Course >></div>
+                  </a>
+                  <a href="course1.html" class="pre-course">
+                    <div class="text inline-block middle"><< Previous Course :</div>
+                    <div class="title inline-block middle">Backbone on Rails で作る掲示板サービス #1</div>
+                  </a>
+                </div>
+              </div>
+              <div class="tracks-content">
+                <div class="main-content">
+                  <div class="tracks backbone">
+                    <div class="tracks-image table">
+                      <div class="table-cell">
+                        <img src="img/backbone.png" height="45">
+                      </div>
+                    </div>
+                    <div class="tracks-name">backbone-on-rails</div>
+                    <div class="track-content">
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #0</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #1</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #2</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #3</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #4</a>
+                      </div>
+                      <div class="track">
+                        <a href="">Backbone on Rails で作る掲示板サービス #5</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="summary">
+              <div class="main-content">
+                <table class="summary-table">
+                  <tbody>
+                    <tr>
+                      <td class="title">はじめに</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">目的・ゴール</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">見本URL</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">対象者</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">前提知識</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">学習方法</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">作業環境</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="title">構成</td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="urls">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="copyright">Copyright © 2015 Daraf, Inc. All rights reserved.</div>
+    </div>
+  </div>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript">
+    //チェック
+    $(function(){
+      $(".heading .check").click(function(){
+        if($(this).attr("class")=="check"){
+        $(this).removeClass("check").addClass("checked");}else{
+        $(this).removeClass("checked").addClass("check");}
+        });
+    });
+  </script>
+</body>
+</html>
