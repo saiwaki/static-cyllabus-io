@@ -75,7 +75,7 @@
   font-size: 14px;
 }
 .track-content .track a:hover{
-  background-color: #f8f8f8;
+  background-color: rgba(60, 154, 67, 0.08);
 }
 .track-content .track:last-child a{
   border: none;
