@@ -210,6 +210,7 @@
 .show .diff .nav-tabs-content .file-name{
   float: left;
   width: auto;
+  font-size: 14px;
 }
 .show .diff .nav-tabs-content .switch-btn{
   float: right;
@@ -249,13 +250,14 @@
   border: 1px solid #ddd;
   max-height: 450px;
   overflow: scroll;
+  border-radius: 0px;
 }
 .show .diff .blob-wrapper table{
   border: none;
 }
 .show .diff .file-header{
   border: 1px solid #ddd;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 0px;
   border-bottom: none;
 }
 .show .diff .diff-table{
