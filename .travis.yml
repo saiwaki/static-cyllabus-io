@@ -1,9 +1,5 @@
-language: ruby
-rvm:
-  - "2.1.1"
-branches:
-  only:
-    - master
+addons:
+  artifacts: true
 deploy:
   provider: s3
   access_key_id:
