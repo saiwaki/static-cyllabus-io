@@ -283,6 +283,9 @@
 .show .node + .heading{
   margin-top: 50px;
 }
+.show .node + .image{
+  padding-top: 5px;
+}
 .show .node.image img{
   max-width: 100%;
 }
