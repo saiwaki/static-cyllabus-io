@@ -11,5 +11,6 @@ deploy:
   region: ap-northeast-1
   endpoint: cyllabus.io.s3-website-ap-northeast-1.amazonaws.com
   local-dir: public
+  skip_cleanup: true  
   on:
     branch: master
