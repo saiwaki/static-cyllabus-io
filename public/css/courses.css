@@ -197,7 +197,7 @@
   margin-top: -4px;
   opacity: 1;
 }
-.show code{
+.show pre{
   margin: 0px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -276,6 +276,10 @@
 .show .diff .blob-code-inner{
   white-space: nowrap;
 }
+.show .text-content{
+  border: 1px solid #ddd;
+  padding: 20px;
+}
 
 .show .node{
   padding-bottom: 20px;
@@ -288,6 +292,38 @@
 }
 .show .node.image img{
   max-width: 100%;
+}
+.show .node.try:before{
+  content: "Try >";
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 4px;
+}
+.show .node.comment:before{
+  content: "Comment >";
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 4px;
+}
+.show .node.comment:before{
+  content: "Comment >";
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 4px;
+}
+.show .node.response:before{
+  content: "Response >";
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 4px;
 }
 
 .show .similar-course{
