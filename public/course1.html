@@ -158,7 +158,6 @@
                               <tr class="js-expandable-line" data-position="0">
                                 <td class="blob-num blob-num-expandable" colspan="2">
                                 </td>
-
                                 <td class="blob-code blob-code-inner blob-code-hunk">@@ -21,23 +21,58
                                 @@ gem 'jbuilder', '~&gt; 2.0'</td>
                               </tr>
@@ -2023,261 +2022,263 @@
                   <div class="check"><i class="fa fa-check"></i></div>
                   Step9: validationを定義する
                 </div>
-                <div class="node diff try">
-                  <div role="tabpanel">
-                    <!-- Nav tabs -->
-                    <div class="nav-tabs-content file-header">
-                      <div class="file-name table">
-                        <div class="table-cell">
-                          app/models/board.rb
+                <div class="node try">
+                  <div class="node diff">
+                    <div role="tabpanel">
+                      <!-- Nav tabs -->
+                      <div class="nav-tabs-content file-header">
+                        <div class="file-name table">
+                          <div class="table-cell">
+                            app/models/board.rb
+                          </div>
                         </div>
-                      </div>
-                      <div class="switch-btn table">
-                        <ul class="nav nav-tabs table-cell" role="tablist">
-                          <li role="diff" class="active">
-                            <a href="#diff3" aria-controls="diff3" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
-                          </li>
-                          <li role="diff">
-                            <a href="#all3" aria-controls="all3" role="tab" data-toggle="tab" class="btn btn-right">All</a>
-                          </li>
-                          <div class="clear"></div>
-                        </ul>
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade in active" id="diff3">
-                        <div class="data highlight blob-wrapper">
-                          <table class="diff-table tab-size-8">
-                            <tbody>
-                              <tr data-position="0">
-                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
-                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL0"></td>
-
-                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
-                                "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR0"></td>
-
-                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
-                                @@</td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL1"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR1"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-k">class</span> <span class=
-                                "pl-en">Board <span class="pl-e">&lt;
-                                ActiveRecord::Base</span></span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL2"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR2"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner">&nbsp;&nbsp;has_many <span class=
-                                "pl-c1">:comments</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR3"></td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+ validates <span class="pl-c1">:name</span>,
-                                <span class="pl-c1">presence:</span> <span class=
-                                "pl-c1">true</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL3"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="4" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR4"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-k">end</span></span></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <div class="switch-btn table">
+                          <ul class="nav nav-tabs table-cell" role="tablist">
+                            <li role="diff" class="active">
+                              <a href="#diff3" aria-controls="diff3" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                            </li>
+                            <li role="diff">
+                              <a href="#all3" aria-controls="all3" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                            </li>
+                            <div class="clear"></div>
+                          </ul>
                         </div>
+                        <div class="clear"></div>
                       </div>
-                      <div role="tabpanel" class="tab-pane fade" id="all3">
-                        <div class="blob-wrapper data type-ruby">
-                          <table class="highlight tab-size-8 js-file-line-container">
-                            <tbody>
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="diff3">
+                          <div class="data highlight blob-wrapper">
+                            <table class="diff-table tab-size-8">
+                              <tbody>
+                                <tr data-position="0">
+                                  <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                  "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL0"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
-                                <span class="pl-k">class</span> <span class="pl-en">Board <span class=
-                                "pl-e">&lt; ActiveRecord::Base</span></span></td>
-                              </tr>
+                                  <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                  "..." id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR0"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+                                  <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
+                                  @@</td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;has_many
-                                <span class="pl-c1">:comments</span></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL1"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="1" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR1"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
-                                <span class="pl-c1">:name</span>, <span class="pl-c1">presence:</span>
-                                <span class="pl-c1">true</span></td>
-                              </tr>
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-k">class</span> <span class=
+                                  "pl-en">Board <span class="pl-e">&lt;
+                                  ActiveRecord::Base</span></span></span></td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL2"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
-                                <span class="pl-k">end</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="2" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR2"></td>
+
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner">&nbsp;&nbsp;has_many <span class=
+                                  "pl-c1">:comments</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR3"></td>
+
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+ validates <span class="pl-c1">:name</span>,
+                                  <span class="pl-c1">presence:</span> <span class=
+                                  "pl-c1">true</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="3" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eL3"></td>
+
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="4" id="diff-686ce0a8e3d79a7d7ca5380a9674a90eR4"></td>
+
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-k">end</span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="all3">
+                          <div class="blob-wrapper data type-ruby">
+                            <table class="highlight tab-size-8 js-file-line-container">
+                              <tbody>
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                  <span class="pl-k">class</span> <span class="pl-en">Board <span class=
+                                  "pl-e">&lt; ActiveRecord::Base</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;has_many
+                                  <span class="pl-c1">:comments</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
+                                  <span class="pl-c1">:name</span>, <span class="pl-c1">presence:</span>
+                                  <span class="pl-c1">true</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                  <span class="pl-k">end</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="node diff try">
-                  <div role="tabpanel">
-                    <!-- Nav tabs -->
-                    <div class="nav-tabs-content file-header">
-                      <div class="file-name table">
-                        <div class="table-cell">
-                          app/models/comment.rb
+                  <div class="node diff">
+                    <div role="tabpanel">
+                      <!-- Nav tabs -->
+                      <div class="nav-tabs-content file-header">
+                        <div class="file-name table">
+                          <div class="table-cell">
+                            app/models/comment.rb
+                          </div>
                         </div>
-                      </div>
-                      <div class="switch-btn table">
-                        <ul class="nav nav-tabs table-cell" role="tablist">
-                          <li role="diff" class="active">
-                            <a href="#diff4" aria-controls="diff4" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
-                          </li>
-                          <li role="diff">
-                            <a href="#all4" aria-controls="all4" role="tab" data-toggle="tab" class="btn btn-right">All</a>
-                          </li>
-                          <div class="clear"></div>
-                        </ul>
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade in active" id="diff4">
-                        <div class="data highlight blob-wrapper">
-                          <table class="diff-table tab-size-8">
-                            <tbody>
-                              <tr data-position="0">
-                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
-                                "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49L0"></td>
-
-                                <td class="blob-num blob-num-hunk non-expandable" data-line-number=
-                                "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49R0"></td>
-
-                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
-                                @@</td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49L1"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49R1"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-k">class</span> <span class=
-                                "pl-en">Comment <span class="pl-e">&lt;
-                                ActiveRecord::Base</span></span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49L2"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49R2"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner">&nbsp;&nbsp;belongs_to <span class=
-                                "pl-c1">:board</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49R3"></td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+ validates <span class="pl-c1">:content</span>,
-                                <span class="pl-c1">presence:</span> <span class=
-                                "pl-c1">true</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49L3"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="4" id="diff-3b4cc13a815e6a32db590e41f5d00d49R4"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-k">end</span></span></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <div class="switch-btn table">
+                          <ul class="nav nav-tabs table-cell" role="tablist">
+                            <li role="diff" class="active">
+                              <a href="#diff4" aria-controls="diff4" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                            </li>
+                            <li role="diff">
+                              <a href="#all4" aria-controls="all4" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                            </li>
+                            <div class="clear"></div>
+                          </ul>
                         </div>
+                        <div class="clear"></div>
                       </div>
-                      <div role="tabpanel" class="tab-pane fade" id="all4">
-                        <div class="blob-wrapper data type-ruby">
-                          <table class="highlight tab-size-8 js-file-line-container">
-                            <tbody>
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="diff4">
+                          <div class="data highlight blob-wrapper">
+                            <table class="diff-table tab-size-8">
+                              <tbody>
+                                <tr data-position="0">
+                                  <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                  "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49L0"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
-                                <span class="pl-k">class</span> <span class="pl-en">Comment
-                                <span class="pl-e">&lt; ActiveRecord::Base</span></span></td>
-                              </tr>
+                                  <td class="blob-num blob-num-hunk non-expandable" data-line-number=
+                                  "..." id="diff-3b4cc13a815e6a32db590e41f5d00d49R0"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+                                  <td class="blob-code blob-code-inner blob-code-hunk">@@ -1,3 +1,4
+                                  @@</td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;belongs_to
-                                <span class="pl-c1">:board</span></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49L1"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="1" id="diff-3b4cc13a815e6a32db590e41f5d00d49R1"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
-                                <span class="pl-c1">:content</span>, <span class=
-                                "pl-c1">presence:</span> <span class="pl-c1">true</span></td>
-                              </tr>
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-k">class</span> <span class=
+                                  "pl-en">Comment <span class="pl-e">&lt;
+                                  ActiveRecord::Base</span></span></span></td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49L2"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
-                                <span class="pl-k">end</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="2" id="diff-3b4cc13a815e6a32db590e41f5d00d49R2"></td>
+
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner">&nbsp;&nbsp;belongs_to <span class=
+                                  "pl-c1">:board</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49R3"></td>
+
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+ validates <span class="pl-c1">:content</span>,
+                                  <span class="pl-c1">presence:</span> <span class=
+                                  "pl-c1">true</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="3" id="diff-3b4cc13a815e6a32db590e41f5d00d49L3"></td>
+
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="4" id="diff-3b4cc13a815e6a32db590e41f5d00d49R4"></td>
+
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-k">end</span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="all4">
+                          <div class="blob-wrapper data type-ruby">
+                            <table class="highlight tab-size-8 js-file-line-container">
+                              <tbody>
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                  <span class="pl-k">class</span> <span class="pl-en">Comment
+                                  <span class="pl-e">&lt; ActiveRecord::Base</span></span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC2">&nbsp;&nbsp;belongs_to
+                                  <span class="pl-c1">:board</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC3">&nbsp;&nbsp;validates
+                                  <span class="pl-c1">:content</span>, <span class=
+                                  "pl-c1">presence:</span> <span class="pl-c1">true</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                  <span class="pl-k">end</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2292,260 +2293,262 @@
                   <div class="check"><i class="fa fa-check"></i></div>
                   Step10: Fabricator, Fakerを使ってseedsファイルを記述 し、rake db:seedする
                 </div>
-                <div class="node diff try">
-                  <div role="tabpanel">
-                    <!-- Nav tabs -->
-                    <div class="nav-tabs-content file-header">
-                      <div class="file-name table">
-                        <div class="table-cell">
-                          db/seeds.rb
+                <div class="node try">
+                  <div class="node diff">
+                    <div role="tabpanel">
+                      <!-- Nav tabs -->
+                      <div class="nav-tabs-content file-header">
+                        <div class="file-name table">
+                          <div class="table-cell">
+                            db/seeds.rb
+                          </div>
                         </div>
-                      </div>
-                      <div class="switch-btn table">
-                        <ul class="nav nav-tabs table-cell" role="tablist">
-                          <li role="diff" class="active">
-                            <a href="#diff5" aria-controls="diff5" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
-                          </li>
-                          <li role="diff">
-                            <a href="#all5" aria-controls="all5" role="tab" data-toggle="tab" class="btn btn-right">All</a>
-                          </li>
-                          <div class="clear"></div>
-                        </ul>
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade in active" id="diff5">
-                        <div class="data highlight blob-wrapper">
-                          <table class="diff-table tab-size-8">
-                            <tbody>
-                              <tr class="js-expandable-line" data-position="0">
-                                <td class="blob-num blob-num-expandable" colspan="2">
-                                </td>
-
-                                <td class="blob-code blob-code-inner blob-code-hunk">@@ -5,3 +5,9
-                                @@</td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cL5"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cR5"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-c">#</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cL6"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cR6"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-c"># cities = City.create([{ name:
-                                'Chicago' }, { name: 'Copenhagen' }])</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cL7"></td>
-
-                                <td class="blob-num blob-num-context js-linkable-line-number"
-                                data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cR7"></td>
-
-                                <td class="blob-code blob-code-context"><span class=
-                                "blob-code-inner"><span class="pl-c"># Mayor.create(name: 'Emanuel',
-                                city: cities.first)</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="8" id="diff-f7a25bc30a409fc77050703fc048ca8cR8"></td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+</span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="9" id="diff-f7a25bc30a409fc77050703fc048ca8cR9"></td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+<span class="pl-c1">Fabricator</span>(<span class=
-                                "pl-c1">:board</span>) <span class="pl-k">do</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="10" id="diff-f7a25bc30a409fc77050703fc048ca8cR10">
-                                </td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+ name {<span class=
-                                "pl-c1">Faker</span>::<span class="pl-c1">Name</span>.title}</span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="11" id="diff-f7a25bc30a409fc77050703fc048ca8cR11">
-                                </td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+<span class="pl-k">end</span></span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="12" id="diff-f7a25bc30a409fc77050703fc048ca8cR12">
-                                </td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+</span></td>
-                              </tr>
-
-                              <tr>
-                                <td class="blob-num blob-num-addition empty-cell"></td>
-
-                                <td class="blob-num blob-num-addition js-linkable-line-number"
-                                data-line-number="13" id="diff-f7a25bc30a409fc77050703fc048ca8cR13">
-                                </td>
-
-                                <td class="blob-code blob-code-addition"><span class=
-                                "blob-code-inner">+<span class="pl-c1">10</span>.times {<span class=
-                                "pl-c1">Fabricate</span>(<span class=
-                                "pl-c1">:board</span>)}</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <div class="switch-btn table">
+                          <ul class="nav nav-tabs table-cell" role="tablist">
+                            <li role="diff" class="active">
+                              <a href="#diff5" aria-controls="diff5" role="tab" data-toggle="tab" class="btn btn-left">Diff</a>
+                            </li>
+                            <li role="diff">
+                              <a href="#all5" aria-controls="all5" role="tab" data-toggle="tab" class="btn btn-right">All</a>
+                            </li>
+                            <div class="clear"></div>
+                          </ul>
                         </div>
+                        <div class="clear"></div>
                       </div>
-                      <div role="tabpanel" class="tab-pane fade" id="all5">
-                        <div class="blob-wrapper data type-ruby">
-                          <table class="highlight tab-size-8 js-file-line-container">
-                            <tbody>
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="diff5">
+                          <div class="data highlight blob-wrapper">
+                            <table class="diff-table tab-size-8">
+                              <tbody>
+                                <tr class="js-expandable-line" data-position="0">
+                                  <td class="blob-num blob-num-expandable" colspan="2">
+                                  </td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC1">
-                                <span class="pl-c"># This file should contain all the record creation
-                                needed to seed the database with its default values.</span></td>
-                              </tr>
+                                  <td class="blob-code blob-code-inner blob-code-hunk">@@ -5,3 +5,9
+                                  @@</td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cL5"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC2">
-                                <span class="pl-c"># The data can then be loaded with the rake db:seed
-                                (or created alongside the db with db:setup).</span></td>
-                              </tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="5" id="diff-f7a25bc30a409fc77050703fc048ca8cR5"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-c">#</span></span></td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC3">
-                                <span class="pl-c">#</span></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cL6"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="6" id="diff-f7a25bc30a409fc77050703fc048ca8cR6"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC4">
-                                <span class="pl-c"># Examples:</span></td>
-                              </tr>
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-c"># cities = City.create([{ name:
+                                  'Chicago' }, { name: 'Copenhagen' }])</span></span></td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+                                <tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cL7"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC5">
-                                <span class="pl-c">#</span></td>
-                              </tr>
+                                  <td class="blob-num blob-num-context js-linkable-line-number"
+                                  data-line-number="7" id="diff-f7a25bc30a409fc77050703fc048ca8cR7"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+                                  <td class="blob-code blob-code-context"><span class=
+                                  "blob-code-inner"><span class="pl-c"># Mayor.create(name: 'Emanuel',
+                                  city: cities.first)</span></span></td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC6">
-                                <span class="pl-c"># cities = City.create([{ name: 'Chicago' }, { name:
-                                'Copenhagen' }])</span></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="8" id="diff-f7a25bc30a409fc77050703fc048ca8cR8"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC7">
-                                <span class="pl-c"># Mayor.create(name: 'Emanuel', city:
-                                cities.first)</span></td>
-                              </tr>
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+</span></td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC8"></td>
-                              </tr>
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="9" id="diff-f7a25bc30a409fc77050703fc048ca8cR9"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+<span class="pl-c1">Fabricator</span>(<span class=
+                                  "pl-c1">:board</span>) <span class="pl-k">do</span></span></td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC9">
-                                <span class="pl-c1">Fabricator</span>(<span class=
-                                "pl-c1">:board</span>) <span class="pl-k">do</span></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="10" id="L10">
-                                </td>
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="10" id="diff-f7a25bc30a409fc77050703fc048ca8cR10">
+                                  </td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC10">&nbsp;&nbsp;name
-                                {<span class="pl-c1">Faker</span>::<span class=
-                                "pl-c1">Name</span>.title}</td>
-                              </tr>
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+ name {<span class=
+                                  "pl-c1">Faker</span>::<span class="pl-c1">Name</span>.title}</span></td>
+                                </tr>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="11" id="L11">
-                                </td>
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC11">
-                                <span class="pl-k">end</span></td>
-                              </tr>
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="11" id="diff-f7a25bc30a409fc77050703fc048ca8cR11">
+                                  </td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="12" id="L12">
-                                </td>
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+<span class="pl-k">end</span></span></td>
+                                </tr>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC12"></td>
-                              </tr>
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
 
-                              <tr>
-                                <td class="blob-num js-line-number" data-line-number="13" id="L13">
-                                </td>
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="12" id="diff-f7a25bc30a409fc77050703fc048ca8cR12">
+                                  </td>
 
-                                <td class="blob-code blob-code-inner js-file-line" id="LC13">
-                                <span class="pl-c1">10</span>.times {<span class=
-                                "pl-c1">Fabricate</span>(<span class="pl-c1">:board</span>)}</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num blob-num-addition empty-cell"></td>
+
+                                  <td class="blob-num blob-num-addition js-linkable-line-number"
+                                  data-line-number="13" id="diff-f7a25bc30a409fc77050703fc048ca8cR13">
+                                  </td>
+
+                                  <td class="blob-code blob-code-addition"><span class=
+                                  "blob-code-inner">+<span class="pl-c1">10</span>.times {<span class=
+                                  "pl-c1">Fabricate</span>(<span class=
+                                  "pl-c1">:board</span>)}</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="all5">
+                          <div class="blob-wrapper data type-ruby">
+                            <table class="highlight tab-size-8 js-file-line-container">
+                              <tbody>
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="1" id="L1"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC1">
+                                  <span class="pl-c"># This file should contain all the record creation
+                                  needed to seed the database with its default values.</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="2" id="L2"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC2">
+                                  <span class="pl-c"># The data can then be loaded with the rake db:seed
+                                  (or created alongside the db with db:setup).</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="3" id="L3"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC3">
+                                  <span class="pl-c">#</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="4" id="L4"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC4">
+                                  <span class="pl-c"># Examples:</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="5" id="L5"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC5">
+                                  <span class="pl-c">#</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="6" id="L6"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC6">
+                                  <span class="pl-c"># cities = City.create([{ name: 'Chicago' }, { name:
+                                  'Copenhagen' }])</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="7" id="L7"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC7">
+                                  <span class="pl-c"># Mayor.create(name: 'Emanuel', city:
+                                  cities.first)</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="8" id="L8"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC8"></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="9" id="L9"></td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC9">
+                                  <span class="pl-c1">Fabricator</span>(<span class=
+                                  "pl-c1">:board</span>) <span class="pl-k">do</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="10" id="L10">
+                                  </td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC10">&nbsp;&nbsp;name
+                                  {<span class="pl-c1">Faker</span>::<span class=
+                                  "pl-c1">Name</span>.title}</td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="11" id="L11">
+                                  </td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC11">
+                                  <span class="pl-k">end</span></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="12" id="L12">
+                                  </td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC12"></td>
+                                </tr>
+
+                                <tr>
+                                  <td class="blob-num js-line-number" data-line-number="13" id="L13">
+                                  </td>
+
+                                  <td class="blob-code blob-code-inner js-file-line" id="LC13">
+                                  <span class="pl-c1">10</span>.times {<span class=
+                                  "pl-c1">Fabricate</span>(<span class="pl-c1">:board</span>)}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="node program try">
-                  <pre class="highlightjs bash">￼$ rake db:seed</code></pre>
+                  <div class="node program">
+                    <pre class="highlightjs bash">￼$ rake db:seed</code></pre>
+                  </div>
                 </div>
                 <div class="node text comment">
                   <div class="text-content">

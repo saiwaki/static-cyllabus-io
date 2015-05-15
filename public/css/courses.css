@@ -290,13 +290,16 @@
 }
 
 .show .node{
+  padding-bottom: 25px;
+}
+.show .node.heading{
   padding-bottom: 20px;
 }
 .show .node + .heading{
   margin-top: 50px;
 }
-.show .node + .image{
-  padding-top: 5px;
+.show .node + .node:last-child{
+  padding-bottom: 0px;
 }
 .show .node.image img{
   max-width: 100%;
