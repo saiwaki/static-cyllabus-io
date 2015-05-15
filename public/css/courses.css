@@ -200,7 +200,6 @@
 .show pre{
   margin: 0px;
   padding: 20px;
-  border: 1px solid #ddd;
 }
 
 .show .diff .nav-tabs-content{
@@ -222,26 +221,29 @@
 .show .diff .btn{
   margin-right: 0px;
   border: 1px solid #c6c6c6;
-  padding: 4px 12px;
-  font-size: 14px;
+  padding: 2px 12px;
+  font-size: 13px;
+  color: #555;
 }
 .show .diff .btn-left{
   border-radius: 4px 0px 0px 4px !important;
 }
 .show .diff .btn-right{
   border-radius: 0px 4px 4px 0px !important;
-}
-.show .diff .active .btn{
-  background: #f0f0f0;
-  border: 1px solid #c6c6c6;
-  color: #555555;
-  box-shadow: inset 0 0px 15px rgba(0,0,0,0.2);
+  margin-left: -1px;
 }
 .show .diff .active .btn:after{
   display: none;
 }
 .show .diff .btn:hover{
   color: #555;
+  background-color: #e8e8e8;
+}
+.show .diff .active .btn{
+  background: #e5e5e5;
+  border: 1px solid #c6c6c6;
+  color: #555;
+  box-shadow: none;
 }
 .show .diff .tab-content{
   padding: 0;
