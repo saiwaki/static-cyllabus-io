@@ -157,6 +157,12 @@
   right: 0;
   top: 14px;
 }
+.twitter-facebook iframe{
+  margin-right: 10px;
+}
+.twitter-facebook .fb-like span{
+  display: block;
+}
 .show .tab-content{
   padding: 40px 0px;
 }
