@@ -9,6 +9,14 @@ html,body{
   height: 100%;
   line-height: 1.4;
 }
+::selection {
+  background:#3c9a43; /* Safari */
+  color: #fff;
+}
+::-moz-selection {
+   background:#3c9a43; /* Firefox */
+   color: #fff;
+}
 h1,h2,h3,h4,h5,h6{
   margin: 0;
   padding: 0;
