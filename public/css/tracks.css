@@ -85,11 +85,11 @@
 
 .tracks-boxes{
   padding-top: 40px;
-  box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
 }
 .tracks-box{
   margin-bottom: 40px;
   border: 1px solid #ccc;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
 }
 .tracks-head{
   width: 100%;
@@ -123,8 +123,6 @@
 }
 .tracks-box .tracks-icon{
   border-radius: 50%;
-}
-.track-content{
 }
 .track-content .track a{
   display: block;

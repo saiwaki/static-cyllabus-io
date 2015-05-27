@@ -417,26 +417,34 @@
 .tracks{
   margin-top: 40px;
   box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
 }
-.tracks-image{
-  width: 100%;
-  height: 65px;
-}
-.tracks-image img{
-  display: block;
-  margin: 0 auto;
-  opacity: 0.6;
-}
-.tracks-name{
-  text-align: center;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 8px 0px;
+.tracks-head{
   border-bottom: 1px solid #ddd;
 }
-.track-content{
-  max-height: 400px;
-  overflow: scroll;
+.tracks-head .table{
+  width: auto;
+  height: 65px;
+  padding: 0px 15px;
+}
+.tracks-head .tracks-image{
+  font-size: 18px;
+  font-weight: 600;
+}
+.tracks-head .tracks-image .tracks-icon{
+  margin-right: 5px;
+}
+.tracks-head .tracks-image img{
+  display: block;
+}
+.tracks-head .tracks-num{
+  font-weight: 600;
+  font-size: 16px;
+  color: #555;
+  line-height: 20px;
+}
+.tracks-head .tracks-num .num{
+  font-size: 20px;
 }
 .track a{
   display: block;
@@ -445,24 +453,29 @@
   font-size: 14px;
 }
 .track a:hover{
-  background-color: rgba(60, 154, 67, 0.08);
+  background-color: rgba(60, 154, 67, 0.05);
 }
 .track a.active{
-  background-color: rgba(60, 154, 67, 0.08);
+  background-color: rgba(60, 154, 67, 0.05);
   font-weight: 600;
   color: #1d5d23;
 }
 .track:last-child a{
   border: none;
 }
-.backbone{
-  border: 1px solid #ccc;
+.tracks .tracks-icon{
+  margin-right: 5px;
+  border-radius: 50%;
 }
-.backbone .tracks-image{
-  background-color: #075c94;
+.tracks.backbone .tracks-image{
+  color: #085c94;
 }
-.backbone .tracks-name{
-  color: #075c94;
+.tracks.backbone .tracks-head{
+  background-color: #e7eff4;
+}
+.tracks.backbone .tracks-icon{
+  background-color: #e7eff4;
+  border: 3px solid #075c94;
 }
 
 .summary-table{
