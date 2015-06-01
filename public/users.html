@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cyllabus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link href="img/fav.ico" rel="shortcut icon">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/users.css">
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body class="users index">
+  <div id="wrapper">
+    <header id="header">
+      <nav>
+        <div class="main-content">
+          <div class="header-left left">
+            <div class="table">
+              <div class="table-cell">
+                <a href="index.html" class="logo">
+                  <img src="img/logo.png">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header-right right">
+            <ul>
+              <li>
+                <a href="curriculum.html">Curriculum</a>
+              </li>
+              <li>
+                <a href="tracks.html">Tracks</a>
+              </li>
+              <li>
+                <a href="courses-index.html">Courses</a>
+              </li>
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+              <li class="signup">
+                <div class="table-cell">
+                  <a href="" class="signup-btn">
+                    <i class="fa fa-plus table-cell"></i>
+                  </a>
+                </div>
+              </li>
+              <li class="user">
+                <div class="dropdown table-cell">
+                  <a id="dLabel" class="user-btn" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    <img src="img/user.png" width="35">
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                      <a href="users.html">My page</a>
+                    </li>
+                    <li>
+                      <a href="setting.html">Setting</a>
+                    </li>
+                    <li class="logout">
+                      <a href="">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </nav>
+    </header>
+    <div id="main">
+      <div class="main-content">
+        <div class="user-content">
+          <div class="user-info">
+            <div class="user-img left">
+              <img src="img/user.png" width="120">
+            </div>
+            <div class="user-ex left">
+              <div class="name">Teranishi</div>
+              <div class="learning-data table">
+                <div class="learning table-cell">
+                  <div class="inline-block middle">
+                    Learning：
+                  </div>
+                  <div class="inline-block middle num">
+                    15
+                  </div>
+                </div>
+                <div class="completion table-cell">
+                  <div class="inline-block middle">
+                    Completion：
+                  </div>
+                  <div class="inline-block middle num">
+                    30
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <a href="setting.html" class="profile-edit"><i class="fa fa-edit"></i> Profile Edit</a>
+          </div>
+          <div class="learning-history">
+            <div class="title left">
+              Learning history
+            </div>
+            <div class="filter right">
+              <select class="form-control right">
+                <option>Newest</option>
+                <option>Progress</option>
+                <option>Finished</option>
+              </select>
+            </div>
+            <div class="clear"></div>
+            <div class="courses-content">
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress progress-10">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">10</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress progress-20">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">20</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress progress-30">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">30</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress progress-40">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">40</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress progress-50">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">50</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress half-over progress-60">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">60</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress half-over progress-70">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">70</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress half-over progress-80">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">80</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course table">
+                <div class="course-left table-cell">
+                  <div class="date-by-views">
+                    <div class="date-by">
+                      Posted May 11, 2015 by
+                      <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+                    </div>
+                  </div>
+                  <div class="course-title">
+                    <a href="course1.html">Backbone on Rails で作る掲示板サービス #1</a>
+                  </div>
+                  <div class="courses-tag">
+                    <a href="tracks.html" class="tag track backbone">backbone-on-rails</a>
+                    <a href="courses-index.html" class="tag">Ruby on Rails</a>
+                  </div>
+                </div>
+                <div class="course-right table-cell">
+                  <div class="text">Progress</div>
+                  <div class="progress half-over progress-90">
+                    <div class="progress-color"></div>
+                    <div class="progress-cover"></div>
+                    <div class="progress-num table">
+                      <div class="table-cell">
+                        <span class="num">90</span>%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="copyright">Copyright © 2015 Daraf, Inc. All rights reserved.</div>
+    </div>
+  </div>
+</body>
+</html>

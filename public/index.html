@@ -5,16 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link href="img/fav.ico" rel="shortcut icon">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="css/hover-min.css">
-  <link rel="stylesheet" type="text/css" href="css/github-diff.css">
-  <link rel="stylesheet" href="highlight/styles/github.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="css/top.css">
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script src="highlight/highlight.pack.js"></script>
 </head>
 <body class="top">
   <div id="wrapper">
@@ -42,7 +37,7 @@
                 <a href="courses-index.html">Courses</a>
               </li>
               <li>
-                <a href="">Login</a>
+                <a href="login.html">Login</a>
               </li>
               <li class="signup">
                 <div class="table-cell">
@@ -52,10 +47,21 @@
                 </div>
               </li>
               <li class="user">
-                <div class="table-cell">
-                  <a href="" class="user-btn">
+                <div class="dropdown table-cell">
+                  <a id="dLabel" class="user-btn" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                     <img src="img/user.png" width="35">
                   </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                      <a href="users.html">My page</a>
+                    </li>
+                    <li>
+                      <a href="setting.html">Setting</a>
+                    </li>
+                    <li class="logout">
+                      <a href="">Logout</a>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <div class="clear"></div>
@@ -81,9 +87,9 @@
               <div class="site-title">
                 Programming learning site
               </div>
-              <div class="signup-btn">
-                <a href="">Start cyllabus</a>
-              </div>
+              <a href="" class="signup-btn btn-circle blue">
+                Start cyllabus
+              </a>
             </div>
           </div>
           <div class="clear"></div>
@@ -190,7 +196,7 @@
             </a>
           </div>
           <div class="page-link">
-            <a href="tracks.html" class="tracks-btn">Category List</a>
+            <a href="tracks.html" class="tracks-btn btn-circle green">Category List</a>
           </div>
         </div>
         <div class="title-ex">
@@ -302,7 +308,7 @@
                   </div>
                 </div>
                 <div class="page-link">
-                  <a href="courses-index.html" class="courses-btn">All Courses</a>
+                  <a href="courses-index.html" class="courses-btn btn-circle green">All Courses</a>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade in" id="newest">
@@ -399,7 +405,7 @@
                   </div>
                 </div>
                 <div class="page-link">
-                  <a href="courses-index.html" class="courses-btn">All Courses</a>
+                  <a href="courses-index.html" class="courses-btn btn-circle green">All Courses</a>
                 </div>
               </div>
             </div>

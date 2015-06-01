@@ -5,12 +5,6 @@
   background-image: url(../img/search.png);
   background-repeat: no-repeat;
   background-position: 10px center;
-  box-sizing: border-box;
-}
-.index .filter .form-control:focus{
-  border-color: #3c9a43;
-  outline: 0;
-  box-shadow: none;
 }
 .index .tag-box .filter input[type="search"]{
   background-size: 16px;
@@ -93,7 +87,6 @@
 }
 .index .courses-tag .tag.track.backbone{
   border: 2px solid #075c94;
-  box-sizing: border-box;
   border-radius: 20px;
   background-color: transparent;
   color: #075c94;
@@ -143,7 +136,6 @@
 }
 .show .courses-tag .tag.track{
   border: 2px solid #075c94;
-  box-sizing: border-box;
   border-radius: 20px;
   background-color: transparent;
   color: #075c94;
@@ -513,6 +505,17 @@
 .links-content .link a{
   padding: 10px 12px;
   display: block;
+}
+
+.hljs{
+  display: block;
+  word-wrap: normal;
+  overflow-x:scroll;
+  padding: 0.5em;
+  margin:1em auto;
+  line-height:1.4;
+  font-size:14px;
+  -webkit-text-size-adjust: none;
 }
 
 @media(max-width: 700px){

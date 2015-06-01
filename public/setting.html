@@ -7,11 +7,11 @@
   <link href="img/fav.ico" rel="shortcut icon">
   <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/curriculum.css">
+  <link rel="stylesheet" type="text/css" href="css/setting.css">
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-<body class="curriculum">
+<body class="setting">
   <div id="wrapper">
     <header id="header">
       <nav>
@@ -73,57 +73,69 @@
     </header>
     <div id="main">
       <div class="main-content">
-        <div class="curriculum-contents">
-          <div role="tabpanel">
-            <!-- Nav tabs -->
-            <div class="nav-tabs-content">
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="content" class="active"><a href="#web-design" aria-controls="web-design" role="tab" data-toggle="tab">Web Design</a></li>
-                <li role="content"><a href="#web-application" aria-controls="web-application" role="tab" data-toggle="tab">Web Application</a></li>
-                <div class="clear"></div>
-              </ul>
-            </div>
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="web-design">
-                <div class="curriculum-box">
-                  <div class="curriculum-content design">
-                    <div class="media curriculum-ex">
-                      <div class="media-left">
-                        <div class="image">
-                          <img src="img/design.png">
-                        </div>
+        <div class="setting-content">
+          <div class="title">Setting</div>
+          <div class="setting-box">
+            <div role="tabpanel">
+              <!-- Nav tabs -->
+              <div class="nav-tabs-content">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="content" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                  <li role="content"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">Password</a></li>
+                  <div class="clear"></div>
+                </ul>
+              </div>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                  <div class="avatar">
+                  <label>Profile image</label>
+                    <div class="table">
+                      <div class="avatar-image table-cell">
+                        <img src="img/user.png">
                       </div>
-                      <div class="media-body">
-                        <div class="title">
-                          Make your Web site!
-                        </div>
-                        <div class="ex">
-                          There are 18 tracks it is for learning Web design from the ground up. And the goal is to starting learning from HTML to develop a responsive Web sites in the Word Press publishing.
+                      <div class="avatar-select table-cell">
+                        <div class="well">
+                          <img src="img/image.png" width="40">
+                          <div class="text">
+                            Here to drop or click the file (5MB it possible to upload)
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="username">
+                    <label>Username</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="email">
+                    <label>Email address</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <a href="" class="save-btn btn-circle green right">
+                    Save
+                  </a>
+                  <div class="clear"></div>
                 </div>
-              </div>
-              <div role="tabpanel" class="tab-pane fade in" id="web-application">
-                <div class="curriculum-box">
-                  <div class="curriculum-content app">
-                    <div class="media curriculum-ex">
-                      <div class="media-left">
-                        <div class="image">
-                          <img src="img/app.png">
-                        </div>
-                      </div>
-                      <div class="media-body">
-                        <div class="title">
-                          Make your Web application!
-                        </div>
-                        <div class="ex">
-                          There track is this 14 for learning the WEB application development. Starting with the development of mini-apps RoR, the development of applications made in the "RoR + Backbone.js", and the goal is to publish such as Heroku.
-                        </div>
-                      </div>
-                    </div>
+                <div role="tabpanel" class="tab-pane fade in" id="password">
+                  <div class="current-pass">
+                    <label>Current password</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="new-pass">
+                    <label>New password</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="confirmation-pass">
+                    <label>Confirmation password</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <a href="" class="save-btn btn-circle green right">
+                    Save
+                  </a>
+                  <div class="clear"></div>
+                  <div class="delete">
+                    <a href="">Delete the account</a>
                   </div>
                 </div>
               </div>
