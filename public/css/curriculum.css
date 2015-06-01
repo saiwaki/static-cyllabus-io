@@ -49,6 +49,7 @@
 }
 .curriculum .curriculum-ex .media-left .image img{
   max-width: 100%;
+  width: 100%;
   display: block;
 }
 .curriculum .curriculum-ex .media-left .image:before{
@@ -61,6 +62,7 @@
   width: auto;
   left: 6px;
   right: 6px;
+  box-sizing: border-box;
 }
 .curriculum .curriculum-ex .media-left .image:after{
   content: "";
@@ -72,6 +74,7 @@
   width: auto;
   left: 12px;
   right: 12px;
+  box-sizing: border-box;
 }
 .curriculum .curriculum-ex .media-body{
   width: 50%;
