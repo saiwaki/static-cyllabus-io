@@ -814,6 +814,26 @@ button.close {
   display: block;
   border-radius: 4px;
 }
+#header .header-right.mobile-header{
+  display: none;
+}
+#header .header-right.mobile-header #dLabel2{
+  font-size: 30px;
+  color: #3c9a43;
+}
+#header .header-right.mobile-header .dropdown-menu{
+  box-shadow: 0px 3px 0px rgba(0,0,0,0.4)
+}
+#header .header-right.mobile-header .dropdown-menu li{
+  display: block;
+  float: none;
+  height: auto;
+  padding: 0px;
+}
+#header .header-right.mobile-header .dropdown-menu li a{
+  display: block;
+  text-align: center;
+}
 
 #main{
   padding-bottom: 100px;
@@ -919,6 +939,12 @@ button.close {
 @media(max-width: 700px){
   #header{
     padding: 0px;
+  }
+  #header .header-right.web-header{
+    display: none;
+  }
+  #header .header-right.mobile-header{
+    display: block;
   }
   .main-content{
     width: 95%;
