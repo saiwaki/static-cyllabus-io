@@ -355,7 +355,7 @@
     float: none;
   }
   .top .signup-content .left-content img{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
   }
   .top .signup-content .right-content{
@@ -387,6 +387,7 @@
   }
   .top .categories .category{
     margin-bottom: 15px;
+    padding: 0px 5px;
     width: 33.333%;
   }
   .top .page-link .tracks-btn{
