@@ -36,6 +36,9 @@
   color: #555;
   background-color: #fff;
 }
+.curriculum .mobile-br{
+  display: none;
+}
 .curriculum .curriculum-ex{
   margin-top: 30px;
 }
@@ -109,5 +112,8 @@
   }
   .curriculum .curriculum-ex .media-body{
     margin-top: 20px;
+  }
+  .curriculum .mobile-br{
+    display: block;
   }
 }
