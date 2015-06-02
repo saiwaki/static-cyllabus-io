@@ -97,3 +97,17 @@
 .curriculum .app .curriculum-ex .media-body .title{
   color: #f9da2f;
 }
+
+@media(max-width: 500px){
+  .curriculum .nav-tabs > li > a{
+    font-size: 16px;
+  }
+  .curriculum .curriculum-ex .media-left, .curriculum .curriculum-ex .media-body{
+    width: 100%;
+    padding: 0px;
+    display: block;
+  }
+  .curriculum .curriculum-ex .media-body{
+    margin-top: 20px;
+  }
+}
