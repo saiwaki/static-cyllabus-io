@@ -390,6 +390,10 @@
     padding: 0px 5px;
     width: 33.333%;
   }
+  .top .categories .category-icon img{
+    width: 100%;
+    max-width: 100%;
+  }
   .top .page-link .tracks-btn{
     margin-top: 15px;
   }
