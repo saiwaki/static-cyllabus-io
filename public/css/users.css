@@ -122,7 +122,7 @@
   color: #888;
   margin-bottom: 4px;
 }
-.users .courses-content .course .course-right .progress{
+.users .courses-content .course .course-right .web-progress{
   width: 100px;
   height: 100px;
   background-color: #379b3e;
@@ -130,7 +130,7 @@
   border-radius: 50%;
   position: relative;
 }
-.users .courses-content .course .course-right .progress .progress-color{
+.users .courses-content .course .course-right .web-progress .progress-color{
   width: 100%;
   height: 100%;
   border: 50px solid #eee;
@@ -140,7 +140,7 @@
   transform: rotate(45deg);
   position: absolute;
 }
-.users .courses-content .course .course-right .progress .progress-cover{
+.users .courses-content .course .course-right .web-progress .progress-cover{
   width: 100%;
   height: 100%;
   border: 50px solid #eee;
@@ -149,7 +149,7 @@
   border-right-color: transparent;
   position: absolute;
 }
-.users .courses-content .course .course-right .progress.half-over .progress-cover{
+.users .courses-content .course .course-right .web-progress.half-over .progress-cover{
   width: 100%;
   height: 100%;
   border: 50px solid #379b3e;
@@ -158,34 +158,34 @@
   border-right-color: transparent;
   position: absolute;
 }
-.users .courses-content .course .course-right .progress.progress-10 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-10 .progress-cover{
   transform: rotate(-99deg);
 }
-.users .courses-content .course .course-right .progress.progress-20 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-20 .progress-cover{
   transform: rotate(-60deg);
 }
-.users .courses-content .course .course-right .progress.progress-30 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-30 .progress-cover{
   transform: rotate(-24deg);
 }
-.users .courses-content .course .course-right .progress.progress-40 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-40 .progress-cover{
   transform: rotate(12deg);
 }
-.users .courses-content .course .course-right .progress.progress-50 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-50 .progress-cover{
   transform: rotate(45deg);
 }
-.users .courses-content .course .course-right .progress.progress-60 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-60 .progress-cover{
   transform: rotate(-99deg);
 }
-.users .courses-content .course .course-right .progress.progress-70 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-70 .progress-cover{
   transform: rotate(-63deg);
 }
-.users .courses-content .course .course-right .progress.progress-80 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-80 .progress-cover{
   transform: rotate(-27deg);
 }
-.users .courses-content .course .course-right .progress.progress-90 .progress-cover{
+.users .courses-content .course .course-right .web-progress.progress-90 .progress-cover{
   transform: rotate(9deg);
 }
-.users .courses-content .course .course-right .progress .progress-num{
+.users .courses-content .course .course-right .web-progress .progress-num{
   width: 86%;
   height: 86%;
   position: absolute;
@@ -196,4 +196,65 @@
   top: 7%;
   font-size: 24px;
   font-weight: 600;
+}
+.users .mobile-progress{
+  display: none;
+}
+.users .mobile-progress .progress-bar{
+  font-size: 10px;
+}
+.users .mobile-progress .text{
+  font-weight: 600;
+  color: #888;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
+  font-size: 12px;
+}
+
+@media(max-width: 600px){
+  .users .user-info{
+    padding: 10px;
+  }
+  .users .user-info .user-img{
+    width: 100%;
+    margin: 0px;
+  }
+  .users .user-info .user-img img{
+    margin: 0 auto;
+  }
+  .users .user-info .user-ex{
+    width: 100%;
+    text-align: center;
+  }
+  .users .user-info .user-ex .learning-data{
+    width: 100%;
+  }
+}
+@media(max-width: 500px){
+  .users .user-info .profile-edit{
+    display: none;
+  }
+  .users .courses-content .course .course-right{
+    display: none;
+  }
+  .users .courses-content .course{
+    padding: 10px;
+  }
+  .users .courses-content .course .course-left{
+    padding: 0px;
+  }
+  .users .course-title a{
+    font-size: 18px;
+  }
+  .users .courses-tag .tag{
+    display: none;
+  }
+  .users .courses-tag .tag.track{
+    display: inline-block;
+  }
+  .users .mobile-progress{
+    display: block;
+  }
 }
