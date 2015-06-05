@@ -29,16 +29,16 @@
               </div>
             </div>
           </div>
-          <div class="header-right right web-header">
+         <div class="header-right right web-header">
             <ul>
               <li>
-                <a href="curriculum.html">Curriculum</a>
+                <a href="search.html">Search</a>
               </li>
               <li>
-                <a href="tracks.html">Tracks</a>
+                <a href="topic.html">Topic</a>
               </li>
               <li>
-                <a href="courses-index.html">Courses</a>
+                <a href="roadmap.html">Roadmap</a>
               </li>
               <li>
                 <a href="" class="signup-btn" data-toggle="modal" data-target="#signin">Login</a>
@@ -80,13 +80,13 @@
                   </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel2">
                     <li>
-                      <a href="curriculum.html">Curriculum</a>
+                      <a href="search.html">Search</a>
                     </li>
                     <li>
-                      <a href="tracks.html">Tracks</a>
+                      <a href="topic.html">Topic</a>
                     </li>
-                    <li class="logout">
-                      <a href="courses-index.html">Courses</a>
+                    <li>
+                      <a href="roadmap.html">Roadmap</a>
                     </li>
                     <li>
                       <a href="" data-toggle="modal" data-target="#signin">Login</a>
@@ -96,6 +96,9 @@
                     </li>
                     <li>
                       <a href="users.html">My page</a>
+                    </li>
+                    <li>
+                      <a href="setting.html">Setting</a>
                     </li>
                   </ul>
                 </div>
@@ -111,8 +114,14 @@
         <div class="courses-head">
           <div class="date-by-views table">
             <div class="date-by table-cell">
-              Posted May 11, 2015 by
-              <a href="">Hitoshi Saiwaki(@saiwaki14)</a>
+              <div class="date inline-block middle">
+                <img src="img/time.png" class="inline-block middle" width="18">
+                <div class="inline-block middle">May 11, 2015</div>
+              </div>
+              <div class="by inline-block middle">
+                <img src="img/user2.png" class="inline-block middle" width="18">
+                <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+              </div>
             </div>
             <div class="views table-cell">
               <span class="num">25780</span>views
@@ -121,12 +130,19 @@
           <div class="courses-title">
             <h1>Backbone on Rails で作る掲示板サービス #1</h1>
           </div>
-          <div class="courses-tag">
-            <a href="" class="tag track backbone">backbone-on-rails</a>
-            <a href="" class="tag">Ruby on Rails</a>
-            <a href="" class="tag">jBuilder</a>
-            <a href="" class="tag">Backbone.js</a>
-            <a href="" class="tag">jQuery</a>
+          <div class="courses-topic">
+            <a href="topic-show.html" class="topic">
+              <img src="img/topic/rubyonrails.png" class="inline-block middle">
+              <div class="inline-block middle">Ruby on Rails</div>
+            </a>
+            <a href="topic-show.html" class="topic">
+              <img src="img/topic/backbone.png" class="inline-block middle">
+              <div class="inline-block middle">Backbone.js</div>
+            </a>
+            <a href="topic-show.html" class="topic">
+              <img src="img/topic/jquery.png" class="inline-block middle">
+              <div class="inline-block middle">jQuery</div>
+            </a>
           </div>
         </div>
       </div>
@@ -2608,56 +2624,64 @@
                   </div>
                 </div>
               </div>
-              <div class="similar-course">
+              <div class="track-content">
                 <div class="main-content">
-                  <a href="course2.html" class="next-course hvr-reveal">
-                    <div class="title inline-block middle">Backbone on Rails で作る掲示板サービス #2</div>
-                    <div class="text inline-block middle">: Next Course >></div>
-                  </a>
-                  <a href="" class="pre-course">
-                  </a>
-                </div>
-              </div>
-              <div class="tracks-content">
-                <div class="main-content">
-                  <div class="tracks backbone">
-                    <div class="tracks-head">
-                      <div class="tracks-image left table">
-                        <div class="table-cell">
-                          <div class="tracks-icon inline-block middle">
-                            <img src="img/category/backbone2.png" height="45">
+                  <div class="title">In Track</div>
+                  <div class="track panel panel-default">
+                    <div class="panel-heading" role="tab" id="th1">
+                      <div class="track-left">
+                        <div class="label-date-by table">
+                          <div class="table-cell">
+                            <div class="label inline-block middle">
+                              Track
+                            </div>
+                            <div class="date inline-block middle">
+                              <img src="img/time.png" class="inline-block middle" width="16">
+                              <div class="inline-block middle">May 11, 2015</div>
+                            </div>
+                            <div class="by inline-block middle">
+                              <img src="img/user2.png" class="inline-block middle" width="16">
+                              <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                            </div>
                           </div>
-                          <div class="inline-block middle">
-                            Backbone on Rails で作る掲示板サービス
+                        </div>
+                        <div class="track-title">
+                          HTML入門 - WEBに文章を記述する
+                        </div>
+                        <div class="track-topic">
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/html.png" class="inline-block middle">
+                            <div class="inline-block middle">HTML</div>
+                          </a>
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/css.png" class="inline-block middle">
+                            <div class="inline-block middle">CSS</div>
+                          </a>
+                        </div>
+                        <div class="topic-ratio">
+                          <div class="ratio">
+                            <div class="ratio-bar html p50">50% HTML</div>
+                            <div class="ratio-bar css p50">50% CSS</div>
                           </div>
                         </div>
                       </div>
-                      <div class="tracks-num right table">
-                        <div class="table-cell">
-                          Courses
-                          <div class="num">
-                            10
-                          </div>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
+                      <a class="collapsed track-right" data-toggle="collapse" href="#t1" aria-expanded="false" aria-controls="t1"><div class="num">4</div><div class="text">course</div><div class="caret">▶︎</div></a>
                     </div>
-                    <div class="track-content">
-                      <div class="track">
-                        <a href="" class="active">Backbone on Rails で作る掲示板サービス #1</a>
-                      </div>
-                      <div class="track">
-                        <a href="">Backbone on Rails で作る掲示板サービス #2</a>
-                      </div>
-                      <div class="track">
-                        <a href="">Backbone on Rails で作る掲示板サービス #3</a>
-                      </div>
-                      <div class="track">
-                        <a href="">Backbone on Rails で作る掲示板サービス #4</a>
-                      </div>
-                      <div class="track">
-                        <a href="">Backbone on Rails で作る掲示板サービス #5</a>
-                      </div>
+                    <div id="t1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="th1" aria-expanded="false" style="height: 0px;">
+                      <ol class="list-group">
+                        <li class="list-group-item">
+                          <a href="course1.html">HTMLを始めるための事前準備(mac編)</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="course1.html">HTMLを始めるための事前準備(windows編)</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="course1.html">HTMLの基本タグ7つを試してみる</a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="course1.html">リスト、テーブル、HTML基本構造を学ぶ</a>
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>

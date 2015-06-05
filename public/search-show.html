@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cyllabus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link href="img/fav.ico" rel="shortcut icon">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/search.css">
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body class="search show">
+  <div id="wrapper">
+    <header id="header">
+      <nav>
+        <div class="main-content">
+          <div class="header-left left">
+            <div class="table">
+              <div class="table-cell">
+                <a href="index.html" class="logo">
+                  <img src="img/logo.png">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header-right right web-header">
+            <ul>
+              <li class="active">
+                <a href="search.html">Search</a>
+              </li>
+              <li>
+                <a href="topic.html">Topic</a>
+              </li>
+              <li>
+                <a href="roadmap.html">Roadmap</a>
+              </li>
+              <li>
+                <a href="" class="signup-btn" data-toggle="modal" data-target="#signin">Login</a>
+              </li>
+              <li class="signup">
+                <div class="table-cell">
+                  <a href="" class="signup-btn" data-toggle="modal" data-target="#signup">
+                    <i class="fa fa-plus table-cell"></i>
+                  </a>
+                </div>
+              </li>
+              <li class="user">
+                <div class="dropdown table-cell">
+                  <a id="dLabel" class="user-btn" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    <img src="img/user.png" width="35">
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                      <a href="users.html">My page</a>
+                    </li>
+                    <li>
+                      <a href="setting.html">Setting</a>
+                    </li>
+                    <li class="logout">
+                      <a href="">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="header-right right mobile-header">
+            <ul>
+              <li>
+                <div class="dropdown table-cell">
+                  <a id="dLabel2" class="table" data-target="#" href="" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                    <i class="fa fa-reorder table-cell middle"></i>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel2">
+                    <li class="active">
+                      <a href="search.html">Search</a>
+                    </li>
+                    <li>
+                      <a href="topic.html">Topic</a>
+                    </li>
+                    <li>
+                      <a href="roadmap.html">Roadmap</a>
+                    </li>
+                    <li>
+                      <a href="" data-toggle="modal" data-target="#signin">Login</a>
+                    </li>
+                    <li>
+                      <a href="" data-toggle="modal" data-target="#signup">Signup</a>
+                    </li>
+                    <li>
+                      <a href="users.html">My page</a>
+                    </li>
+                    <li>
+                      <a href="setting.html">Setting</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </nav>
+    </header>
+    <div id="main">
+      <div class="main-content">
+        <div class="search-content">
+
+          <div class="search-box">
+            <input type="search" class="form-control left" placeholder="Title search">
+            <div class="search-btn left">
+              <a href="search-show.html" class="btn-circle green">Search</a>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+          <div class="search-title">
+            “ HTML ”
+          </div>
+
+          <div class="refine">
+            <div class="title">Refine</div>
+            <div class="refine-box">
+              <div class="topic-lists">
+                <div class="topic-list">
+                  <a href="topic-show.html">
+                    <img src="img/topic/css.png" class="inline-block middle">
+                    <div class="inline-block middle">
+                      CSS
+                    </div>
+                    <div class="num">2000</div>
+                  </a>
+                </div>
+                <div class="topic-list">
+                  <a href="topic-show.html">
+                    <img src="img/topic/webdesign.png" class="inline-block middle">
+                    <div class="inline-block middle">
+                      Web Design
+                    </div>
+                    <div class="num">750</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-result">
+            <div role="tabpanel">
+              <!-- Nav tabs -->
+              <div class="nav-tabs-content">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="content" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All(2750)</a></li>
+                  <li role="content"><a href="#course" aria-controls="course" role="tab" data-toggle="tab">Course(2000)</a></li>
+                  <li role="content"><a href="#track" aria-controls="track" role="tab" data-toggle="tab">Track(750)</a></li>
+                  <div class="clear"></div>
+                </ul>
+              </div>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="all">
+                  <div class="result-content">
+                    <div class="course">
+                      <div class="course-top">
+                        <div class="date-by-views table">
+                          <div class="date-by table-cell">
+                            <div class="date inline-block middle">
+                              <img src="img/time.png" class="inline-block middle" width="16">
+                              <div class="inline-block middle">May 11, 2015</div>
+                            </div>
+                            <div class="by inline-block middle">
+                              <img src="img/user2.png" class="inline-block middle" width="16">
+                              <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                            </div>
+                          </div>
+                          <div class="views table-cell">
+                            <span class="num">25780</span>views
+                          </div>
+                        </div>
+                        <div class="course-title">
+                          <a href="course1.html">HTMLを始めるための事前準備(mac編)</a>
+                        </div>
+                        <div class="courses-topic">
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/html.png" class="inline-block middle">
+                            <div class="inline-block middle">HTML</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="course-bottom">
+                        <div class="intrack">
+                          <div class="title-head">In Track</div>
+                          <div class="intrack-contents">
+                            <div class="intrack-content">
+                              <a href="">HTML入門 - WEBに文章を記述する</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="course">
+                      <div class="course-top">
+                        <div class="date-by-views table">
+                          <div class="date-by table-cell">
+                            <div class="date inline-block middle">
+                              <img src="img/time.png" class="inline-block middle" width="16">
+                              <div class="inline-block middle">May 11, 2015</div>
+                            </div>
+                            <div class="by inline-block middle">
+                              <img src="img/user2.png" class="inline-block middle" width="16">
+                              <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                            </div>
+                          </div>
+                          <div class="views table-cell">
+                            <span class="num">25780</span>views
+                          </div>
+                        </div>
+                        <div class="course-title">
+                          <a href="course1.html">HTMLの基本タグ7つを試してみる</a>
+                        </div>
+                        <div class="courses-topic">
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/html.png" class="inline-block middle">
+                            <div class="inline-block middle">HTML</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="course-bottom">
+                        <div class="intrack">
+                          <div class="title-head">In Track</div>
+                          <div class="intrack-contents">
+                            <div class="intrack-content">
+                              <a href="">HTML入門 - WEBに文章を記述する</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track panel panel-default">
+                      <div class="panel-heading" role="tab" id="th1">
+                        <div class="track-left">
+                          <div class="label-date-by table">
+                            <div class="table-cell">
+                              <div class="label inline-block middle">
+                                Track
+                              </div>
+                              <div class="date inline-block middle">
+                                <img src="img/time.png" class="inline-block middle" width="16">
+                                <div class="inline-block middle">May 11, 2015</div>
+                              </div>
+                              <div class="by inline-block middle">
+                                <img src="img/user2.png" class="inline-block middle" width="16">
+                                <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="track-title">
+                            HTML入門 - WEBに文章を記述する
+                          </div>
+                          <div class="track-topic">
+                            <a href="topic-show.html" class="topic">
+                              <img src="img/topic/html.png" class="inline-block middle">
+                              <div class="inline-block middle">HTML</div>
+                            </a>
+                            <a href="topic-show.html" class="topic">
+                              <img src="img/topic/css.png" class="inline-block middle">
+                              <div class="inline-block middle">CSS</div>
+                            </a>
+                          </div>
+                          <div class="topic-ratio">
+                            <div class="ratio">
+                              <div class="ratio-bar html p50">50% HTML</div>
+                              <div class="ratio-bar css p50">50% CSS</div>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="collapsed track-right" data-toggle="collapse" href="#t1" aria-expanded="false" aria-controls="t1"><div class="num">4</div><div class="text">course</div><div class="caret">▶︎</div></a>
+                      </div>
+                      <div id="t1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="th1" aria-expanded="false" style="height: 0px;">
+                        <ol class="list-group">
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLを始めるための事前準備(mac編)</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLを始めるための事前準備(windows編)</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLの基本タグ7つを試してみる</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">リスト、テーブル、HTML基本構造を学ぶ</a>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="course">
+                  <div class="result-content">
+                    <div class="course">
+                      <div class="course-top">
+                        <div class="date-by-views table">
+                          <div class="date-by table-cell">
+                            <div class="date inline-block middle">
+                              <img src="img/time.png" class="inline-block middle" width="16">
+                              <div class="inline-block middle">May 11, 2015</div>
+                            </div>
+                            <div class="by inline-block middle">
+                              <img src="img/user2.png" class="inline-block middle" width="16">
+                              <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                            </div>
+                          </div>
+                          <div class="views table-cell">
+                            <span class="num">25780</span>views
+                          </div>
+                        </div>
+                        <div class="course-title">
+                          <a href="course1.html">HTMLを始めるための事前準備(mac編)</a>
+                        </div>
+                        <div class="courses-topic">
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/html.png" class="inline-block middle">
+                            <div class="inline-block middle">HTML</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="course-bottom">
+                        <div class="intrack">
+                          <div class="title-head">In Track</div>
+                          <div class="intrack-contents">
+                            <div class="intrack-content">
+                              <a href="">HTML入門 - WEBに文章を記述する</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="course">
+                      <div class="course-top">
+                        <div class="date-by-views table">
+                          <div class="date-by table-cell">
+                            <div class="date inline-block middle">
+                              <img src="img/time.png" class="inline-block middle" width="16">
+                              <div class="inline-block middle">May 11, 2015</div>
+                            </div>
+                            <div class="by inline-block middle">
+                              <img src="img/user2.png" class="inline-block middle" width="16">
+                              <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                            </div>
+                          </div>
+                          <div class="views table-cell">
+                            <span class="num">25780</span>views
+                          </div>
+                        </div>
+                        <div class="course-title">
+                          <a href="course1.html">HTMLの基本タグ7つを試してみる</a>
+                        </div>
+                        <div class="courses-topic">
+                          <a href="topic-show.html" class="topic">
+                            <img src="img/topic/html.png" class="inline-block middle">
+                            <div class="inline-block middle">HTML</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="course-bottom">
+                        <div class="intrack">
+                          <div class="title-head">In Track</div>
+                          <div class="intrack-contents">
+                            <div class="intrack-content">
+                              <a href="">HTML入門 - WEBに文章を記述する</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="track">
+                  <div class="result-content">
+                    <div class="track panel panel-default">
+                      <div class="panel-heading" role="tab" id="th2">
+                        <div class="track-left">
+                          <div class="label-date-by table">
+                            <div class="table-cell">
+                              <div class="label inline-block middle">
+                                Track
+                              </div>
+                              <div class="date inline-block middle">
+                                <img src="img/time.png" class="inline-block middle" width="16">
+                                <div class="inline-block middle">May 11, 2015</div>
+                              </div>
+                              <div class="by inline-block middle">
+                                <img src="img/user2.png" class="inline-block middle" width="16">
+                                <a href="users.html" class="inline-block middle" width="16">@saiwaki</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="track-title">
+                            HTML入門 - WEBに文章を記述する
+                          </div>
+                          <div class="track-topic">
+                            <a href="topic-show.html" class="topic">
+                              <img src="img/topic/html.png" class="inline-block middle">
+                              <div class="inline-block middle">HTML</div>
+                            </a>
+                            <a href="topic-show.html" class="topic">
+                              <img src="img/topic/css.png" class="inline-block middle">
+                              <div class="inline-block middle">CSS</div>
+                            </a>
+                          </div>
+                          <div class="topic-ratio">
+                            <div class="ratio">
+                              <div class="ratio-bar html p50">50% HTML</div>
+                              <div class="ratio-bar css p50">50% CSS</div>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="collapsed track-right" data-toggle="collapse" href="#t2" aria-expanded="false" aria-controls="t2"><div class="num">4</div><div class="text">course</div><div class="caret">▶︎</div></a>
+                      </div>
+                      <div id="t2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="th2" aria-expanded="false" style="height: 0px;">
+                        <ol class="list-group">
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLを始めるための事前準備(mac編)</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLを始めるための事前準備(windows編)</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">HTMLの基本タグ7つを試してみる</a>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="course1.html">リスト、テーブル、HTML基本構造を学ぶ</a>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="copyright">Copyright © 2015 Daraf, Inc. All rights reserved.</div>
+    </div>
+  </div>
+  <div class="modal fade" id="signup">
+    <div class="modal-dialog">
+      <div class="logo">
+        <img src="img/logo3.png">
+      </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Singup</h4>
+        </div>
+        <div class="modal-body">
+          <div class="email">
+            <label>Email address</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="username">
+            <label>Username</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="password">
+            <label>Password</label>
+            <input type="password" class="form-control">
+          </div>
+          <a href="" class="signup-btn btn-circle blue">
+            Create Free Account
+          </a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <div class="modal fade" id="signin">
+    <div class="modal-dialog">
+      <div class="logo">
+        <img src="img/logo3.png">
+      </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div class="email">
+            <label>Email address</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="password">
+            <label>
+              Password (
+              <a href="">Forget password</a>
+              )
+            </label>
+            <input type="password" class="form-control">
+          </div>
+          <a href="" class="login-btn btn-circle green">
+            Login
+          </a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</body>
+</html>

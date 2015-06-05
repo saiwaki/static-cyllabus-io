@@ -113,3 +113,15 @@
   margin-top: 20px;
   padding-top: 10px;
 }
+
+@media(max-width: 600px){
+  .setting .setting-content .setting-box{
+    width: 100%;
+  }
+}
+@media(max-width: 500px){
+  .setting .save-btn{
+    width: 100%;
+    text-align: center;
+  }
+}

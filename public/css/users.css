@@ -56,66 +56,17 @@
   width: 120px;
 }
 .users .courses-content{
-  border: 1px solid #ccc;
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.users .courses-content .course{
-  border-bottom: 1px solid #ddd;
-}
-.users .courses-content .course:last-child{
-  border: none;
-}
 .users .courses-content .course .course-left{
-  padding: 14px 20px 18px;
   text-align: left;
 }
-.users .date-by-views{
-  text-align: left;
-  color: #999;
-}
-.users .date-by-views .views{
-  text-align: right;
-  color: #555;
-}
-.users .date-by-views .views .num{
-  font-size: 18px;
-  margin-right: 4px;
-  color: #3c5b9a;
-  font-weight: 600;
-}
-.users .course-title{
-  padding: 12px 0px 14px;
-}
-.users .course-title a{
-  font-size: 22px;
-  color: #555;
-  font-weight: 600;
-}
-.users .course-title a:hover{
-  color: #3c9a43;
-}
-.users .courses-tag .tag{
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0px 5px;
-  padding: 4px 12px;
-  color: #3c5b9a;
-  background-color: rgba(60, 91, 154, 0.1);
-}
-.users .courses-tag .tag.track.backbone{
-  border: 2px solid #075c94;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #075c94;
-  font-weight: 600;
-}
-.users .courses-tag .tag:first-child{
-  margin-left: 0px;
-}
+
 .users .courses-content .course .course-right{
   border-left: 1px solid #ddd;
   width: 140px;
+  padding: 5px 0px;
 }
 .users .courses-content .course .course-right .text{
   font-weight: 600;
