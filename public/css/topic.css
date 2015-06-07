@@ -120,3 +120,19 @@
 .show .tab-content{
   padding-top: 20px;
 }
+
+@media(max-width: 500px){
+  .topic .topic-list{
+    width: 100%;
+  }
+  .topic .topic-list:nth-child(3n-1){
+    margin: 0px;
+  }
+  .show .topic-result .nav li{
+    text-align: center;
+  }
+  .show .topic-result .nav li .num{
+    display: block;
+    line-height: 16px;
+  }
+}
