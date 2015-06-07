@@ -8,6 +8,18 @@
   background-size: 25px;
   padding-left: 40px;
 }
+.topic.show .search-box input[type="search"]{
+  width: 80%;
+}
+.topic.show .search-box .search-btn{
+  width: 20%;
+  padding-left: 10px;
+}
+.topic.show .search-box .search-btn a{
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+}
 .topic-lists{
   margin-top: 30px;
   font-size: 0px;
@@ -134,5 +146,14 @@
   .show .topic-result .nav li .num{
     display: block;
     line-height: 16px;
+  }
+  .topic.show .search-box input[type="search"]{
+    width: 65%;
+  }
+  .topic.show .search-box .search-btn{
+    width: 35%;
+  }
+  .topic.show .search-box .search-btn a{
+    font-size: 14px;
   }
 }
