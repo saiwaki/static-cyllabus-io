@@ -313,6 +313,12 @@
   .top .signup-content .catch, .top .signup-content .site-title{
     font-size: 26px;
   }
+  .top .topic-list{
+    width: 100%;
+  }
+  .top .topic-list:nth-child(3n-1){
+    margin: 0px;
+  }
   .top .signup-content .signup-btn{
     width: 100%;
   }
@@ -328,15 +334,6 @@
   .top .roadmap-box .roadmap-content.app{
     margin-top: 20px;
   }
-  .top .categories .category{
-    margin-bottom: 15px;
-    padding: 0px 5px;
-    width: 33.333%;
-  }
-  .top .categories .category-icon img{
-    width: 100%;
-    max-width: 100%;
-  }
   .top .page-link .tracks-btn{
     margin-top: 15px;
   }
@@ -345,17 +342,5 @@
   }
   .top .nav-tabs > li > a{
     font-size: 16px;
-  }
-  .top .courses-content .course{
-    padding: 10px;
-  }
-  .top .course-title a{
-    font-size: 18px;
-  }
-  .top .courses-tag .tag{
-    display: none;
-  }
-  .top .courses-tag .tag.track{
-    display: inline-block;
   }
 }

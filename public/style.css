@@ -1228,3 +1228,39 @@ button.close {
     width: 95%;
   }
 }
+
+@media(max-width: 500px){
+  .course-top .course-title a, .track-left .track-title{
+    font-size: 18px;
+  }
+  .course-bottom .intrack .title-head{
+    padding: 2px 12px;
+  }
+  .course-top .date-by-views .date, .track-left .label-date-by .date{
+    font-size: 12px;
+  }
+  .course-top .date-by-views .by, .track-left .label-date-by .by{
+    display: none;
+  }
+  .course-bottom .intrack .intrack-content a{
+    padding: 8px 12px;
+  }
+  .track .track-right{
+    width: 60px;
+  }
+  .track .track-right .text{
+    display: none;
+  }
+  .track .track-right .caret{
+    margin-top: 8px;
+  }
+  .course .course-top, .track .track-left{
+    padding: 8px 12px 12px;
+  }
+  .track .panel-collapse ol > li:before{
+    left: 12px;
+  }
+  .track .panel-collapse li a{
+    padding-left: 40px;
+  }
+}
