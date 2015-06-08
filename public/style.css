@@ -1360,10 +1360,22 @@ button.close {
   .track .track-bottom li a{
     padding-left: 40px;
   }
+  .intrack-content a{
+    padding: 8px 12px;
+  }
   .modal-dialog{
     width: 95%;
   }
   .modal-body .btn-circle{
     width: 100%;
+  }
+  .track-modal .modal-header{
+    padding: 16px 12px;
+  }
+  .track-modal .modal-body .track-topic{
+    padding: 5px 12px 10px;
+  }
+  .track-modal .modal-body .date-by-courses{
+    padding: 8px 12px;
   }
 }
