@@ -1293,6 +1293,9 @@ button.close {
   color: #555;
   font-size: 12px;
 }
+.track-modal .modal-body .track-topic .topic:hover{
+  background-color: #f5f5f5;
+}
 .track-modal .modal-body .track-topic .topic img{
   width: 18px;
 }
