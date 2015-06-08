@@ -158,9 +158,9 @@
   font-weight: 600;
   color: #888;
   margin-top: 10px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   border-top: 1px solid #ddd;
-  padding-top: 2px;
+  padding-top: 6px;
   font-size: 12px;
 }
 
@@ -189,9 +189,6 @@
   }
   .users .courses-content .course .course-right{
     display: none;
-  }
-  .users .courses-content .course{
-    padding: 10px;
   }
   .users .courses-content .course .course-left{
     padding: 0px;

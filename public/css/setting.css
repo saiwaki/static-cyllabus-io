@@ -124,4 +124,11 @@
     width: 100%;
     text-align: center;
   }
+  .setting .avatar .avatar-select{
+    display: none;
+  }
+  .setting .avatar .avatar-image img{
+    width: 100px;
+    height: 100px;
+  }
 }

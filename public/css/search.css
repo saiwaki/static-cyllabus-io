@@ -141,4 +141,13 @@
     display: block;
     line-height: 16px;
   }
+  .show .topic-list{
+    width: 100%;
+  }
+  .show .topic-list:nth-child(3n-1){
+    margin: 0px;
+  }
+  .show .search-title{
+    font-size: 22px;
+  }
 }

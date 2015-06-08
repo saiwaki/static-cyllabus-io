@@ -1263,4 +1263,10 @@ button.close {
   .track .panel-collapse li a{
     padding-left: 40px;
   }
+  .modal-dialog{
+    width: 95%;
+  }
+  .modal-body .btn-circle{
+    width: 100%;
+  }
 }
