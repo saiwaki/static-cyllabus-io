@@ -289,7 +289,7 @@
   border-left: 6px solid #3C9A43;
   padding-left: 8px;
 }
-.show .track .panel-collapse li a{
+.show .track .track-bottom li a{
   font-size: 14px;
 }
 .show .track .label-date-by{
