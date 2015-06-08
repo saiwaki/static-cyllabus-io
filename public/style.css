@@ -1004,7 +1004,7 @@ button.close {
   font-weight: 600;
 }
 .course-top .course-title{
-  padding: 10px 0px 12px;
+  padding: 10px 0px 7px;
 }
 .track-left .track-title{
   padding: 12px 0px;
@@ -1020,7 +1020,8 @@ button.close {
 .course-top .courses-topic .topic, .track-left .track-topic .topic{
   display: inline-block;
   vertical-align: middle;
-  margin: 0px 5px;
+  margin-right: 5px;
+  margin-top: 5px;
   padding: 4px 12px;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -1032,9 +1033,6 @@ button.close {
 }
 .course-top .courses-topic .topic img, .track-left .track-topic .topic img{
   width: 18px;
-}
-.course-top .courses-topic .topic:first-child, .track-left .track-topic .topic:first-child{
-  margin-left: 0px;
 }
 .track-left .ratio{
   width: 100%;

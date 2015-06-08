@@ -1,5 +1,5 @@
 .show .courses-head{
-  padding: 20px 0px 28px;
+  padding: 20px 0px 23px;
 }
 .show .date-by-views{
   text-align: left;
@@ -34,7 +34,8 @@
 .show .courses-topic .topic{
   display: inline-block;
   vertical-align: middle;
-  margin: 0px 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
   padding: 4px 12px;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -46,9 +47,6 @@
 }
 .show .courses-topic .topic img{
   width: 18px;
-}
-.show .courses-topic .topic:first-child{
-  margin-left: 0px;
 }
 
 .show .courses-content{
@@ -349,5 +347,32 @@
 @media(max-width: 700px){
   .node.image img{
     max-width: 100%;
+  }
+  .show .nav-tabs{
+    width: 100%;
+  }
+}
+@media(max-width: 500px){
+  .show .date-by-views .date-by{
+    font-size: 14px;
+  }
+  .show .date-by-views .views{
+    font-size: 14px;
+  }
+  .show .date-by-views .views .num{
+    font-size: 22px;
+  }
+  .show .courses-title h1{
+    font-size: 26px;
+  }
+  .show .courses-topic .topic{
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .show .heading{
+    font-size: 20px;
+  }
+  .show .text-content{
+    padding: 10px;
   }
 }
