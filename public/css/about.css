@@ -1,0 +1,168 @@
+.about .about-content{
+  padding: 30px 0px;
+}
+.about .about-content .media .media-left{
+  width: 50%;
+  padding-right: 10px;
+}
+.about .about-content .media .media-body{
+  width: 50%;
+  padding-left: 10px;
+}
+.about .about-content .media img{
+  max-width: 100%;
+}
+.about .about-content .title-head1{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.about .about-content .title-head1.first{
+  margin-top: 0px;
+}
+.about .about-content .title-head1 img{
+  margin-top: -1px;
+}
+.about .about-content .title-head1 .title{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.about .about-content .title-head2{
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 6px solid #3C9A43;
+  padding: 0px 8px;
+  margin: 25px 0px 15px;
+}
+.about .about-content #whatscyllabus .media-left{
+  width: 47%;
+}
+.about .about-content #whatscyllabus .media-body{
+  width: 53%;
+}
+.about .about-content #whatscyllabus .catch{
+  font-size: 24px;
+  font-weight: 600;
+  color: #3C9A43;
+  margin: 5px 0px;
+  line-height: 26px;
+}
+.about .about-content #whatscyllabus .ex{
+  line-height: 22px;
+}
+.about .about-content #howtolearn .howtolearn-list{
+  padding: 10px 0px;
+}
+.about .about-content #howtolearn .howtolearn-list li{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.about .about-content #howtolearn .howtolearn-list li a{
+  font-size: 16px;
+}
+.about .about-content #howtolearn .howtolearn-list .caret{
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  background-color: #3C9A43;
+  border-radius: 2px;
+}
+.about .about-content #howtolearn .howtolearn-list .caret img{
+  width: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.about .about-content #howtolearn .content-ex{
+  font-size: 0;
+  padding: 0px 10px;
+  margin-top: 25px;
+}
+.about .about-content #howtolearn .content-ex .ex{
+  width: 33.333%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 10px;
+}
+.about .about-content #howtolearn .content-ex .ex img{
+  max-width: 100%;
+  border: 1px solid #3C9A43;
+  border-radius: 12px;
+}
+.about .about-content #howtolearn .content-ex .ex .title{
+  font-size: 18px;
+  font-weight: 600;
+  color: #3C9A43;
+  margin-top: 5px;
+}
+.about .about-content #howtolearn .content-ex .ex p{
+  margin: 0px;
+}
+.about .about-content #howtolearn .howtolearn-ex{
+  margin-bottom: 25px;
+}
+.about .about-content #howtolearn .howtolearn-ex img{
+  border: 1px solid #ddd;
+  width: 500px;
+  margin: 10px 0px;
+  display: block;
+}
+.about .about-content #howtolearn .howtolearn-ex .title{
+  font-size: 18px;
+  font-weight: 600;
+}
+.about .about-content #howtolearn .howtolearn-ex.course1 .text{
+  line-height: 22px;
+}
+.about .about-content #howtolearn .howtolearn-ex.course1 .text ul{
+  padding-left: 24px;
+}
+.about .about-content #howtolearn .howtolearn-ex.course1 .text li{
+  list-style-type: upper-alpha;
+}
+.about .about-content #howtolearn .howtolearn-ex.account4 .text ul{
+  padding-left: 24px;
+}
+.about .about-content #howtolearn .howtolearn-ex.account4 .text li{
+  list-style-type: decimal;
+}
+.about .about-content #howtolearn .howtolearn-ex.account4 .img{
+  width: 500px;
+  height: 200px;
+  border: 1px solid #ddd;
+  margin: 10px 0px;
+}
+.about .about-content #qanda .qanda-content{
+  margin-bottom: 25px;
+}
+.about .about-content #qanda .question{
+  margin-bottom: 10px;
+}
+.about .about-content #qanda .mark,.about .about-content #qanda .text{
+  float: left;
+  font-size: 14px;
+}
+.about .about-content #qanda .mark{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.about .about-content #qanda .question .mark{
+  background-color: #e05950;
+}
+.about .about-content #qanda .answer .mark{
+  background-color: #5973a9;
+}
+.about .about-content #qanda .text{
+  margin-top: 10px;
+  width: 650px;
+}
+.about .about-content #qanda .question .text{
+  font-weight: 600;
+}
