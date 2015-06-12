@@ -101,12 +101,12 @@
   margin: 0px;
 }
 .about .about-content #howtolearn .howtolearn-ex{
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .about .about-content #howtolearn .howtolearn-ex img{
   border: 1px solid #ddd;
-  width: 500px;
-  margin: 10px 0px;
+  width: 700px;
+  margin: 10px 0px 15px;
   display: block;
 }
 .about .about-content #howtolearn .howtolearn-ex .title{
@@ -129,40 +129,91 @@
   list-style-type: decimal;
 }
 .about .about-content #howtolearn .howtolearn-ex.account4 .img{
-  width: 500px;
+  width: 700px;
   height: 200px;
   border: 1px solid #ddd;
-  margin: 10px 0px;
+  margin: 10px 0px 15px;
 }
 .about .about-content #qanda .qanda-content{
   margin-bottom: 25px;
 }
 .about .about-content #qanda .question{
   margin-bottom: 10px;
+  display: table;
+  width: 100%;
+}
+.about .about-content #qanda .answer{
+  display: table;
+  width: 100%;
 }
 .about .about-content #qanda .mark,.about .about-content #qanda .text{
-  float: left;
+  display: table-cell;
+  vertical-align: top;
   font-size: 14px;
 }
 .about .about-content #qanda .mark{
+  width: 40px;
+}
+.about .about-content #qanda .mark .mark-box{
   width: 40px;
   height: 40px;
   text-align: center;
   color: #fff;
   font-weight: 600;
   font-size: 20px;
-  margin-right: 10px;
 }
-.about .about-content #qanda .question .mark{
+.about .about-content #qanda .question .mark .mark-box{
   background-color: #e05950;
 }
-.about .about-content #qanda .answer .mark{
+.about .about-content #qanda .answer .mark .mark-box{
   background-color: #5973a9;
 }
 .about .about-content #qanda .text{
-  margin-top: 10px;
-  width: 650px;
+  padding: 10px 0 0 10px;
 }
 .about .about-content #qanda .question .text{
   font-weight: 600;
+}
+
+@media(max-width: 700px){
+  .about .about-content #howtolearn .howtolearn-ex img,
+  .about .about-content #howtolearn .howtolearn-ex.account4 .img{
+    width: 100%;
+  }
+}
+@media(max-width: 600px){
+  .about .about-content #whatscyllabus .media-left{
+    width: 100%;
+    padding: 0px;
+  }
+  .about .about-content #whatscyllabus .media-body{
+    display: none;
+  }
+}
+@media(max-width: 500px){
+  .about .about-content #qanda .mark{
+    width: 30px;
+  }
+  .about .about-content #qanda .mark .mark-box{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .about .about-content #qanda .text{
+    padding-top: 6px;
+  }
+  .about .about-content #howtolearn .content-ex{
+    padding: 0px;
+  }
+  .about .about-content #howtolearn .content-ex .ex{
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  .about .about-content #howtolearn .content-ex .ex img{
+    width: 60%;
+  }
+  .about .about-content #howtolearn .content-ex .ex .title{
+    margin-top: 0px;
+  }
 }

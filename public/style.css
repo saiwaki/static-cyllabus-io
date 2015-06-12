@@ -1173,7 +1173,7 @@ button.close {
   z-index: 9999;
 }
 #page-top a {
-  background-color: #0B5F32;
+  background-color: #59a95f;
   text-decoration: none;
   color: rgba(255,255,255,0.9);
   width: 45px;
@@ -1183,10 +1183,11 @@ button.close {
   display: table;
   border-radius: 5px;
   font-size: 24px;
+  opacity: 0.9;
 }
 #page-top a:hover {
   text-decoration: none;
-  background: #327751;
+  background: #3c9a43;
 }
 
 .modal-backdrop{
