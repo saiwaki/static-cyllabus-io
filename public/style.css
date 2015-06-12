@@ -36,6 +36,9 @@ a:hover{
   color: #1d5d23;
   text-decoration: none;
 }
+a img{
+  outline: none;
+}
 table{
   border-collapse: collapse;
   width: 100%;

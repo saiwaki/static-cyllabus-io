@@ -191,6 +191,14 @@
   }
 }
 @media(max-width: 500px){
+  .about .about-content #howtolearn .howtolearn-list{
+    font-size: 0px;
+  }
+  .about .about-content #howtolearn .howtolearn-list li{
+    width: 33.333%;
+    margin-right: 0px;
+    padding-right: 5px;
+  }
   .about .about-content #qanda .mark{
     width: 30px;
   }
