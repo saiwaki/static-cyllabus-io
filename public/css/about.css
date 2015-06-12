@@ -113,7 +113,7 @@
   font-size: 18px;
   font-weight: 600;
 }
-.about .about-content #howtolearn .howtolearn-ex.course1 .text{
+.about .about-content #howtolearn .howtolearn-ex .text{
   line-height: 22px;
 }
 .about .about-content #howtolearn .howtolearn-ex.course1 .text ul{
@@ -170,6 +170,7 @@
 }
 .about .about-content #qanda .text{
   padding: 10px 0 0 10px;
+  line-height: 22px;
 }
 .about .about-content #qanda .question .text{
   font-weight: 600;
