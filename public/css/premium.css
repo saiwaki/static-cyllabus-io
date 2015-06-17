@@ -74,15 +74,15 @@
   top: 20px;
 }
 .premium-content #privilege .media{
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .premium-content #privilege .title-ex{
   width: 60%;
-  padding-right: 15px;
+  padding-right: 20px;
 }
 .premium-content #privilege .privilege2 .title-ex{
   padding-right: 0px;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .premium-content #privilege .title-ex .ex{
   font-size: 15px;
@@ -98,6 +98,7 @@
 }
 .premium-content #privilege .image img{
   max-width: 100%;
+  width: 100%;
 }
 .premium-content #privilege .title-ex .text{
   font-size: 24px;

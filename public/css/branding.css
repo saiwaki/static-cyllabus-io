@@ -1,0 +1,90 @@
+.branding-content{
+  padding: 30px 0px;
+}
+.branding-content .heading1{
+  font-size: 22px;
+  font-weight: 600;
+}
+.branding-content .heading2{
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 6px solid #3C9A43;
+  padding: 0px 8px;
+}
+.branding-content .downloads-text{
+  margin: 10px 0px 15px;
+}
+.branding-content .downloads-contents{
+  font-size: 0px;
+  margin-bottom: 20px;
+}
+.branding-content .downloads-content{
+  width: 220px;
+  display: inline-block;
+  font-size: 14px;
+}
+.branding-content .downloads-content:nth-child(2){
+  margin: 0px 20px;
+}
+.branding-content .downloads-content a{
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.branding-content .downloads-content a .table-cell{
+  height: 150px;
+}
+.branding-content .downloads-content a .table-cell img{
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.branding-content .origin-text{
+  margin: 10px 0px 35px;
+}
+.branding-content #colorpalette .palettes{
+  margin-top: 20px;
+}
+.branding-content #colorpalette .palette{
+  text-align: center;
+  width: 25%;
+  font-size: 16px;
+  line-height: 20px;
+  float: left;
+  margin-bottom: 25px;
+}
+.branding-content #colorpalette .palette .color{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #ddd;
+}
+.branding-content #colorpalette .palette .color.green1{
+  background-color: #3c9a43;
+}
+.branding-content #colorpalette .palette .color.green2{
+  background-color: #59a95f;
+}
+.branding-content #colorpalette .palette .color.darkgreen{
+  background-color: #455340;
+}
+.branding-content #colorpalette .palette .color.lightgreen{
+  background-color: #7d877a;
+}
+.branding-content #colorpalette .palette .color.red1{
+  background-color: #da3b30;
+}
+.branding-content #colorpalette .palette .color.red2{
+  background-color: #e05950;
+}
+.branding-content #colorpalette .palette .color.blue1{
+  background-color: #3c5b9a;
+}
+.branding-content #colorpalette .palette .color.blue2{
+  background-color: #5973a9;
+}
+.branding-content #colorpalette .palette .name{
+  font-weight: 600;
+  margin-top: 5px;
+}
